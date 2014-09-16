@@ -4,7 +4,7 @@ var Manager;
 
   $(function () {
     Manager = new AjaxSolr.Manager({
-      solrUrl: 'http://reuters-demo.tree.ewdev.ca:9090/reuters/'
+      solrUrl: 'http://localhost:8983/solr/foodRecommender/'
     });
     Manager.addWidget(new AjaxSolr.ResultWidget({
       id: 'result',

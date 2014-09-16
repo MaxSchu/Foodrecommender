@@ -5,21 +5,31 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	</head>
 
 	<body>
 		<h1>hallo foodrecommender!</h1>
-
-
-		<script src="libs/jquery-1.9.1.min.js"></script>
-		<script src="libs/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="libs/jquery-jvectormap-1.2.2.min.js"></script>
+		<div id="result"></div>
 
 
 		
-		<script src="src/MainMenuView.js"></script>
+
+		<script src="libs/core/Core.js"></script>
+	 	<script src="libs/core/AbstractManager.js"></script>
+	 	<script src="libs/managers/Manager.jquery.js"></script>
+		<script src="libs/core/Parameter.js"></script>
+	 	<script src="libs/core/ParameterStore.js"></script>
+		<script src="libs/core/AbstractWidget.js"></script>
+		<script src="libs/core/AbstractFacetWidget.js"></script>
+		<script src="libs/core/AbstractTextWidget.js"></script>
+		<script src="libs/core/lovefood.js"></script>
+		<script src="libs/widgets/ResultWidget.js"></script>
+
+		
+
 		<script>
-			init();
 		</script>
 	</body>
 </html>

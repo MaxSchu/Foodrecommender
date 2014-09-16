@@ -1,12 +1,3 @@
-(function (callback) {
-  if (typeof define === 'function' && define.amd) {
-    define(['core/AbstractWidget'], callback);
-  }
-  else {
-    callback();
-  }
-}(function () {
-
 (function ($) {
 
 AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
@@ -20,22 +11,22 @@ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
 
   template: function (doc) {
     var snippet = '';
-    if (doc.text.length > 300) {
-      snippet += doc.dateline + ' ' + doc.text.substring(0, 300);
-      snippet += '<span style="display:none;">' + doc.text.substring(300);
+    console.log(doc.Instructions);
+    if (doc.Instructions.length > 300) {
+      snippet += doc.Instructions.substring(0, 300);
+      snippet += '<span style="display:none;">' + doc.Instructions.substring(300);
       snippet += '</span> <a href="#" class="more">more</a>';
     }
     else {
-      snippet += doc.dateline + ' ' + doc.text;
+      snippet += doc.Instructions;
     }
 
-    var output = '<div><h2>' + doc.title + '</h2>';
+    var output = '<div><h2>' + doc.Title + '</h2>';
     output += '<p id="links_' + doc.id + '" class="links"></p>';
     output += '<p>' + snippet + '</p></div>';
+    console.log(output );
     return output;
   }
 });
 
 })(jQuery);
-
-}));
