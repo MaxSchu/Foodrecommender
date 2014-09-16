@@ -2,3 +2,48 @@ body {
 
 }
 
+header{
+	
+}
+#homebutton{
+	float: left;
+	width: 30%;
+}
+#search{
+	text-align: right;
+}
+
+
+#logo-bar{
+	position: relative;
+	clear:both;
+	width: 100%;
+	height: 10%;
+}
+
+
+#foodpic{
+	display: block;
+}
+
+#profil{
+	position: absolute;
+	left: 0;
+}
+
+#myrecipe{
+	position: absolute;
+	right: 0;
+}
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
