@@ -1,9 +1,16 @@
 body {
-
+	
 }
 
 header{
 	
+}
+
+#content{
+	width: 1000px;
+	margin-left: auto;
+    margin-right: auto;	
+	background-color:#eee;
 }
 #homebutton{
 	float: left;
@@ -16,9 +23,7 @@ header{
 
 #logo-bar{
 	position: relative;
-	clear:both;
 	width: 100%;
-	height: 10%;
 }
 
 
@@ -31,11 +36,24 @@ header{
 	left: 0;
 }
 
-#myrecipe{
+#my-recipe{
 	position: absolute;
 	right: 0;
+	top: 0;
 }
 
+#suggestions{
+
+}
+
+.line {
+	clear: both;
+	display: inline-block;
+	width: 980px;
+	margin-left: 10px;
+    margin-right: 10px;	
+    margin-bottom: 40px;
+}
 
 .center {
     margin-left: auto;
@@ -47,3 +65,15 @@ header{
 	border-color: black;
 	border-width: 1px;
 }
+
+.suggestion{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 300px;
+	height: 300px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+}
+

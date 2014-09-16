@@ -5,21 +5,22 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	</head>
 
 	<body>
-
+	<div id = "content">
 
 		<header>
 			<div id = "homebutton" class = "border"> HOME</div>
 			<div id = "search" class = "border">Searchbar</div>
 			
 			<div id = "logo-bar">
-				<a>Profil</a>
+				<a id = "profile">Profil</a>
 				<img id = "foodpic" class = "center" src="res/img/lovefood.png"></img>
-				<a>Meine Rezepte</a>
+				<a id = "my-recipe">Meine Rezepte</a>
 			</div>
 			
 			
@@ -27,15 +28,21 @@
 
 		<main>
 			<div id = "suggestions">
-			<div>Beliebteste Rezepte</div>
-			<div>Tagesvorschläge</div>
-			<div>Rezepte für mich</div>
-			<div>Menüvorschläge</div>
-			<div>Aktuelle Anlässe</div>
-			<div>Nationalitätsgerichte</div>
-			<div>Bestbewertete Gerichte</div>
-			<div>schnell zubereitete Gerichte</div>
-			<div>Rezepte geordnet nach Schwierigkeit</div>
+				<div class = "line">
+					<div class = "suggestion">Beliebteste Rezepte</div>
+					<div class = "suggestion">Tagesvorschläge</div>
+					<div class = "suggestion">Rezepte für mich</div>
+				</div>
+				<div class = "line">
+					<div class = "suggestion">Menüvorschläge</div>
+					<div class = "suggestion">Aktuelle Anlässe</div>
+					<div class = "suggestion">Nationalitätsgerichte</div>
+				</div>
+				<div class = "line">
+					<div class = "suggestion">Bestbewertete Gerichte</div>
+					<div class = "suggestion">schnell zubereitete Gerichte</div>
+					<div class = "suggestion">Rezepte geordnet nach Schwierigkeit</div>
+				</div>				
 			</div>
 		</main>
 
@@ -44,7 +51,7 @@
 			<div >Über uns</div>
 		</footer>
 		
-
+	</div>
 
 		
 
