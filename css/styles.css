@@ -1,27 +1,23 @@
 body {
-	height: 100%;
+	
 }
 
-html {
-	height: 100%;
-}
 header{
 	
 }
+
 /* Index styles */
 
 
 #homebutton{
 	float: left;
-	width: 200px;
-	height: 100%;
+	width: 20%;
 	text-align: center;
 }
 #homebutton.border{
+	border-top: none;
 	border-left: none;
 	border-bottom: none;
-	border-top: none;
-
 }
 #search{
 	text-align: right;
@@ -109,45 +105,30 @@ header{
 }
 
 /* myrecipes styles */
-#foodpic-small{
-	height: 100px;
-	width: auto;
-	display: block;
-	margin-bottom: 0;
-}
+
 
 
 
 
 /* often occuring styles */
-#main-content{
-	float: left;
-	margin: 0;
-	padding: 0;
-	display: inline; 
-}
-
 .header {
 	height: 100px;
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
+	width: auto;
 }
 
 .left-nav {
+	width: 20%;
+	height: inherit;
 	float: left;
-	width: 200px;
-	height: 100%;
-  	
+	
 }
 
 .left-nav.border {
-	border-top-color: transparent;
+	border-top: none;
 }
 
 .content{
 	width: 1000px;
-	height: 100%;
 	margin-left: auto;
     margin-right: auto;	
 	background-color:#eee;

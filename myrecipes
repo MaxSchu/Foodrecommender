@@ -11,26 +11,45 @@
 	</head>
 
 	<body>
-	<div class = "content">
+	<div id = "content">
 
 		<header>
+			<div id = "homebutton" class = "border"> HOME</div>
+			<div id = "search" class = "border">Searchbar</div>
+			
+			<div id = "logo-bar">
+				<a id = "profile">Profil</a>
 				<img id = "foodpic" class = "center" src="res/img/lovefood.png"></img>
-				<p class = "center">We love cooking and friends!</p>		
+				<a id = "my-recipe">Meine Rezepte</a>
+			</div>
+			
+			
 		</header>
 
 		<main>
-			<h3 class = "center">Neu? <a>HIER</a> gehts zur Registrierung</h3>
-			<h3 class = "center">Nur neugierig? <a>HIER</a> gehts zu Love and Food ohne Account</h3>
-			<h3 class = "center"><a>HIER</a> mit Facebook Account einloggen</h3>
-
-			<div id = "login-box" class = "center border">
-				<p id = "username">Nutzername</p>
-				<input id = "name-input"></input>
-				<p id = "pw">Passwort</p>
-				<input id = "pw-input"></input>
-				<a id = "forgot-pw">Passwort vergessen?</a>
+			<div id = "suggestions">
+				<div class = "line">
+					<div class = "suggestion">Beliebteste Rezepte</div>
+					<div class = "suggestion">Tagesvorschläge</div>
+					<div class = "suggestion">Rezepte für mich</div>
+				</div>
+				<div class = "line">
+					<div class = "suggestion">Menüvorschläge</div>
+					<div class = "suggestion">Aktuelle Anlässe</div>
+					<div class = "suggestion">Nationalitätsgerichte</div>
+				</div>
+				<div class = "line">
+					<div class = "suggestion">Bestbewertete Gerichte</div>
+					<div class = "suggestion">schnell zubereitete Gerichte</div>
+					<div class = "suggestion">Rezepte geordnet nach Schwierigkeit</div>
+				</div>				
 			</div>
 		</main>
+
+		
+		<footer>
+			<div >Über uns</div>
+		</footer>
 		
 	</div>
 
