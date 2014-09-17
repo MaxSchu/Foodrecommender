@@ -11,7 +11,6 @@ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
 
   template: function (doc) {
     var snippet = '';
-    console.log(doc.Instructions);
     if (doc.Instructions.length > 300) {
       snippet += doc.Instructions.substring(0, 300);
       snippet += '<span style="display:none;">' + doc.Instructions.substring(300);
@@ -24,7 +23,6 @@ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
     var output = '<div><h2>' + doc.Title + '</h2>';
     output += '<p id="links_' + doc.id + '" class="links"></p>';
     output += '<p>' + snippet + '</p></div>';
-    console.log(output );
     return output;
   }
 });

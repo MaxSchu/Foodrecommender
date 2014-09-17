@@ -31,7 +31,7 @@ AjaxSolr.Manager = AjaxSolr.AbstractManager.extend(
       options.type = 'POST';
     }
     else {
-      options.url = this.solrUrl + servlet + '?' + string + '&wt=json';
+      options.url = this.solrUrl + servlet + '?' + string + '&wt=json&json.wrf=?&callback=?';
     }
     jQuery.ajax(options).done(handler).fail(errorHandler);
   }
