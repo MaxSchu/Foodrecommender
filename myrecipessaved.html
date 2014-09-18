@@ -11,45 +11,29 @@
 	</head>
 
 	<body>
-	<div id = "content">
+	<div class = "content">
 
 		<header>
-			<div id = "homebutton" class = "border"> HOME</div>
-			<div id = "search" class = "border">Searchbar</div>
-			
-			<div id = "logo-bar">
-				<a id = "profile">Profil</a>
-				<img id = "foodpic" class = "center" src="res/img/lovefood.png"></img>
-				<a id = "my-recipe">Meine Rezepte</a>
-			</div>
-			
-			
+			<div class = "header">
+				<div id = "homebutton" class = "border" >HOME</div>
+				<img id = "foodpic-small" class = "center" src="res/img/lovefood.png"></img>
+			</div>						
 		</header>
 
-		<main>
-			<div id = "suggestions">
-				<div class = "line">
-					<div class = "suggestion">Beliebteste Rezepte</div>
-					<div class = "suggestion">Tagesvorschläge</div>
-					<div class = "suggestion">Rezepte für mich</div>
-				</div>
-				<div class = "line">
-					<div class = "suggestion">Menüvorschläge</div>
-					<div class = "suggestion">Aktuelle Anlässe</div>
-					<div class = "suggestion">Nationalitätsgerichte</div>
-				</div>
-				<div class = "line">
-					<div class = "suggestion">Bestbewertete Gerichte</div>
-					<div class = "suggestion">schnell zubereitete Gerichte</div>
-					<div class = "suggestion">Rezepte geordnet nach Schwierigkeit</div>
-				</div>				
-			</div>
-		</main>
 
-		
-		<footer>
-			<div >Über uns</div>
-		</footer>
+		<div class = "left-nav border">
+			<button class = "left-navi-button">Meine Rezepte</button>
+		</div>
+
+				
+		<div id = "main-content">
+			<h4 class = "center"> Von mir gespeicherte Rezepte: </h4>
+			<ul>
+				<li>Rezept1 <button id = "edit1">Löschen</button></li>
+				<li>Rezept2 <button id = "edit2">Löschen</button></li>
+			</ul>
+
+		</div>
 		
 	</div>
 

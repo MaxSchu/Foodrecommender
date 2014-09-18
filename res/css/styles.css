@@ -133,13 +133,12 @@ header{
 
 /* often occuring styles */
 #main-content{
-	width: 800px;
-	height: 100%;
+	width: 799px;
+	height: calc(100% - 100px);
 	float: left;
 	margin: 0;
 	padding: 0;
 	display: inline; 
-	background-color:#eee;
 }
 
 .header {
@@ -151,10 +150,8 @@ header{
 
 .left-nav {
 	float: left;
-	width: 200px;
-	height: 100%;
-	background-color:#eee;
-  	
+	width: 201px;
+	height: calc(100% - 100px); 	
 }
 
 .left-nav.border {
@@ -180,7 +177,7 @@ header{
 	border-width: 1px;
 }
 
-p.center, h3.center{
+h4.center, p.center, h3.center{
 	text-align: center;
 }
 
@@ -195,7 +192,7 @@ p.center, h3.center{
 }
 
 .left-navi-button{
-	width: 198px;
+	width: 199px;
 	height: 50px;
 	margin: 0;
 	padding: 0;
