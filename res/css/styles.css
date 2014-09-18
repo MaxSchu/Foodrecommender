@@ -9,7 +9,15 @@ header{
 	
 }
 /* Index styles */
-
+#index-content{
+	width: 1000px;
+	margin-left: auto;
+    margin-right: auto;	
+	background-color:#eee;
+	position: relative;
+	height: auto;
+	min-height: 100% !important;
+}
 
 #homebutton{
 	float: left;
