@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Foodrecommender</title>
+		<link rel="stylesheet" href="res/css/styles.css">
+		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	</head>
+
+	<body>
+	<div class = "content">
+
+		<header>
+			<div class = "header">
+				<div id = "homebutton" class = "border" >HOME</div>
+				<img id = "foodpic-small" class = "center" src="res/img/lovefood.png"></img>
+			</div>						
+		</header>
+
+
+		<div class = "left-nav border">
+			<button id = "personal-button" class = "left-navi-button">Persönliche Daten</button>
+			<button id = "i-like-button" class = "left-navi-button">Ich mag</button>
+			<button id = "i-dont-like-button" class = "left-navi-button">Ich mag nicht</button>
+			<button id = "social-button"class = "left-navi-button">Soziale Netzwerke</button>
+		</div>
+
+				
+		<div id = "main-content">
+			<div id = "personal-information">
+				<h3> Mein Profil:</h4>
+
+				<div id = "profile-infomation" class = "border center">
+					<p>Accountname: Mustermann</p>
+					<p>Name: Muster</p>
+					<p>Vorname: Mann</p>
+					<p>Email: muster@mann.de</p>
+				</div>
+				<button id="edit-profile" class = "profile-button border">Profil bearbeiten</button>
+				<button id="change-pw" class = "profile-button border">Passwort ändern</button>
+				<button id="notification-button" class = "profile-button border">Benachrichtigungseinstellungen</button>
+			</div>
+
+			<div id = "like-ingredient-profile">
+				<h4 class = "center"> In meinen Gerichten lege ich viel Wert auf folgende Zutaten: </h4>
+				<div class = "ingredient-choice border center">
+					<ul>
+						<li>Bohnen</li>
+						<li>Salami</li>
+						<li>Fisch</li>
+					</ul>
+				</div>		
+			</div>
+
+			<div id = "dislike-ingredient-profile">
+				<h4 class = "center"> In meinen Gerichten lege sollen folgende Zutaten nicht vorkommen: </h4>
+				<div class = "ingredient-choice border center">
+					<ul>
+						<li>Bohnen</li>
+						<li>Salami</li>
+						<li>Fisch</li>
+					</ul>
+				</div>		
+			</div>
+			
+			<div id = "social-network-profile">
+				<h4>Hier kannst du deine soziale Netzwerkanbindung verwalten</h4>
+				<button id="facebook-button-profile" class = "profile-button border">Facebook</button>
+				<button id="twitter-button-profile" class = "profile-button border">Twitter</button>
+				<button id="g+-button-profile" class = "profile-button border">Google+</button>
+			</div>
+		</div>
+
+
+		</div>
+		
+	</div>
+
+		
+
+		<script src="js/profile.js"></script>
+
+
+		<script src="libs/core/Core.js"></script>
+	 	<script src="libs/core/AbstractManager.js"></script>
+	 	<script src="libs/managers/Manager.jquery.js"></script>
+		<script src="libs/core/Parameter.js"></script>
+	 	<script src="libs/core/ParameterStore.js"></script>
+		<script src="libs/core/AbstractWidget.js"></script>
+		<script src="libs/core/AbstractFacetWidget.js"></script>
+		<script src="libs/core/AbstractTextWidget.js"></script>
+		<script src="libs/core/lovefood.js"></script>
+		<script src="libs/widgets/ResultWidget.js"></script>
+
+		
+
+		<script>
+		</script>
+	</body>
+</html>
