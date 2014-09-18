@@ -8,6 +8,7 @@ html {
 header{
 	
 }
+
 /* Index styles */
 #index-content{
 	width: 1000px;
@@ -148,6 +149,40 @@ header{
 }
 
 
+/*recipe styles*/
+#foto-box{
+	width: 500px;
+	height: 250px;
+	background-color: black;
+}
+
+#foto-box-img{
+	display: block;
+	height: 250px;
+	width: auto;
+}
+
+#foto-arrow-left{
+	float: left;
+	margin-top: 105px;
+	margin-left: 50px;
+	height: 40px;
+	width: 40px;
+}
+
+#foto-arrow-right{
+	float: right;
+	margin-top: 105px;
+	margin-right: 50px;
+	height: 40px;
+	width: 40px;
+}
+
+.recipe-text{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 /* often occuring styles */
 #main-content{
 	width: 799px;
@@ -194,7 +229,7 @@ header{
 	border-width: 1px;
 }
 
-h4.center, p.center, h3.center{
+h2.center, h4.center, p.center, h3.center{
 	text-align: center;
 }
 

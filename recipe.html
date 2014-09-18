@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Foodrecommender</title>
+		<link rel="stylesheet" href="res/css/styles.css">
+		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	</head>
+
+	<body>
+	<div class = "content">
+
+		<header>
+			<div class = "header">
+				<div id = "homebutton" class = "border" >HOME</div>
+				<img id = "foodpic-small" class = "center" src="res/img/lovefood.png"></img>
+			</div>						
+		</header>
+
+
+		<div class = "left-nav border">
+			<button id = "recipe-button" class = "left-navi-button">Rezept</button>
+			<button id = "ingredients-button" class = "left-navi-button">Zutaten</button>
+			<button id = "equipment-button" class = "left-navi-button">Ausrüstung</button>
+			<button id = "fotos-button" class = "left-navi-button">Fotos</button>
+			<button id = "votes-button" class = "left-navi-button">Bewertungen</button>
+		</div>
+
+				
+		<div id = "main-content">
+			<h2 class = "center">Thai Curry</h2>
+			<img id = "foto-arrow-left" src="res/img/arrowleft.png"></img>
+			<img id = "foto-arrow-right" src="res/img/arrowright.png"></img>
+			<div id = "foto-box" class = "center">				
+				<img id = "foto-box-img" class="center" src = "res/img/foodtest.jpg"></img>
+			</div>
+			<h4 class = "recipe-text">Rezept:</h4>
+			<p id="recipe-description" class="recipe-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<ul>
+				<li>Lorem ipsum</li>
+				<li>Lorem ipsum</li>
+			</ul>
+
+		</div>
+		
+	</div>
+
+		
+
+		<script src="js/homebutton.js"></script>
+
+
+		<script src="libs/core/Core.js"></script>
+	 	<script src="libs/core/AbstractManager.js"></script>
+	 	<script src="libs/managers/Manager.jquery.js"></script>
+		<script src="libs/core/Parameter.js"></script>
+	 	<script src="libs/core/ParameterStore.js"></script>
+		<script src="libs/core/AbstractWidget.js"></script>
+		<script src="libs/core/AbstractFacetWidget.js"></script>
+		<script src="libs/core/AbstractTextWidget.js"></script>
+		<script src="libs/core/lovefood.js"></script>
+		<script src="libs/widgets/ResultWidget.js"></script>
+
+		
+
+		<script>
+		</script>
+	</body>
+</html>
