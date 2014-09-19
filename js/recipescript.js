@@ -28,7 +28,7 @@ $("#equipment-button").click(function () {
 		$votesContent.hide();
     });
 
-$("#fotos-buttton").click(function () {
+$("#fotos-button").click(function () {
 		$recipeContent.hide();
 		$ingredientsContent.hide();
 		$equipmentContent.hide();

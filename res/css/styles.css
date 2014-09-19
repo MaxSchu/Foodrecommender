@@ -190,7 +190,7 @@ header{
 	margin-right: 70px;
 }
 
-.recipe-text{
+#recipe-description{
 	margin-left: 20px;
 	margin-right: 20px;
 }
@@ -266,4 +266,12 @@ h2.center, h4.center, p.center, h3.center{
 	border-top: none;
 	border-left: none;
 	border-right: none;	
+}
+
+.left-text{
+	margin-left: 20px;
+}
+
+.right-text{
+	margin-right: 20px;
 }

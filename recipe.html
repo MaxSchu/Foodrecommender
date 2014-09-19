@@ -10,11 +10,15 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
 		<!-- jRating-->
-		<!-- CSS file -->
 		<link rel="stylesheet" type="text/css" href="jquery/jRating.jquery.css" media="screen" />
-		<!-- jQuery files -->
 		<script type="text/javascript" src="jquery/jquery.js"></script>
 		<script type="text/javascript" src="jquery/jRating.jquery.js"></script>
+
+		<!-- JCarousel -->
+		<script type="text/javascript" src="jquery/Jcarousel/jcarousel.basic.js"></script>
+		<script type="text/javascript" src="jquery/Jcarousel/jquery.jcarousel.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery/Jcarousel/css/style.css">
+        <link rel="stylesheet" type="text/css" href="jquery/Jcarousel/css/jcarousel.basic.css">
 	</head>
 
 	<body>
@@ -40,13 +44,27 @@
 		<div id = "main-content">
 			<div id ="recipe-content">
 				<h2 class = "center">Thai Curry</h2>
-				<img id = "foto-arrow-left" src="res/img/arrowleft.png"></img>
-				<img id = "foto-arrow-right" src="res/img/arrowright.png"></img>
-				<div id = "foto-box" class = "center">				
-					<img id = "foto-box-img" class="center" src = "res/img/foodtest.jpg"></img>
-				</div>
-				<h4 class = "recipe-text">Rezept:</h4>
-				<p id="recipe-description" class="recipe-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				<div class="jcarousel-wrapper">
+	                <div class="jcarousel">
+	                    <ul>
+	                        <li><img src="jquery/Jcarousel/img/img1.jpg" width="600" height="400" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img2.jpg" width="600" height="400" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img3.jpg" width="600" height="400" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img4.jpg" width="600" height="400" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img5.jpg" width="600" height="400" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img6.jpg" width="600" height="400" alt=""></li>
+	                    </ul>
+	                </div>
+
+	                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+	                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+	                
+	                <p class="jcarousel-pagination">
+	                    
+	                </p>
+        		</div>
+				<h4 class = "left-text">Rezept:</h4>
+				<p id="recipe-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 				<ul>
 					<li>Lorem ipsum</li>
 					<li>Lorem ipsum</li>
@@ -56,16 +74,28 @@
 				<div class="rating" data-average="5" data-id="3"></div>
 			</div>
 			<div id = "ingredients-content">
-				
-
+				<h2 class = "center">Thai Curry</h2>
+				<h4 class = "left-text">Zutaten:</h4>
+				<ul>
+					<li>200g Asia Gemüse</li>
+					<li>50g grüne Curry paste</li>
+					<li>lorem</li>
+					<li>ipsum</li>
+				</ul>
 			</div>
 			<div id = "equipment-content">
-				
+				<h2 class = "center">Thai Curry</h2>
+				<h4 class = "left-text">Kochutensilien:</h4>
+				<ul>
+					<li>Pfanne</li>
+					<li>Kochlöffel</li>
+					<li>Teller</li>
+					<li>Besteck</li>
+				</ul>
 
 			</div>
 			<div id = "fotos-content">
-				
-
+	            
 			</div>
 			<div id = "votes-content">
 				
