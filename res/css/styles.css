@@ -14,7 +14,7 @@ header{
 	width: 1000px;
 	margin-left: auto;
     margin-right: auto;	
-	background-color:#eee;
+	background-color:#B7CEA8;
 	position: relative;
 	height: auto;
 	min-height: 100% !important;
@@ -178,6 +178,18 @@ header{
 	width: 40px;
 }
 
+.rating {
+	clear: both;
+	float:right;
+	background-color: black;
+	margin-right: 20px;
+}
+
+#rating-text{
+	float:right;
+	margin-right: 70px;
+}
+
 .recipe-text{
 	margin-left: 20px;
 	margin-right: 20px;
@@ -215,7 +227,7 @@ header{
 	height: 100%;
 	margin-left: auto;
     margin-right: auto;	
-	background-color:#eee;
+	background-color:#B7CEA8;
 }
 
 .center {

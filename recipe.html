@@ -8,6 +8,13 @@
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+		<!-- jRating-->
+		<!-- CSS file -->
+		<link rel="stylesheet" type="text/css" href="jquery/jRating.jquery.css" media="screen" />
+		<!-- jQuery files -->
+		<script type="text/javascript" src="jquery/jquery.js"></script>
+		<script type="text/javascript" src="jquery/jRating.jquery.js"></script>
 	</head>
 
 	<body>
@@ -31,18 +38,40 @@
 
 				
 		<div id = "main-content">
-			<h2 class = "center">Thai Curry</h2>
-			<img id = "foto-arrow-left" src="res/img/arrowleft.png"></img>
-			<img id = "foto-arrow-right" src="res/img/arrowright.png"></img>
-			<div id = "foto-box" class = "center">				
-				<img id = "foto-box-img" class="center" src = "res/img/foodtest.jpg"></img>
+			<div id ="recipe-content">
+				<h2 class = "center">Thai Curry</h2>
+				<img id = "foto-arrow-left" src="res/img/arrowleft.png"></img>
+				<img id = "foto-arrow-right" src="res/img/arrowright.png"></img>
+				<div id = "foto-box" class = "center">				
+					<img id = "foto-box-img" class="center" src = "res/img/foodtest.jpg"></img>
+				</div>
+				<h4 class = "recipe-text">Rezept:</h4>
+				<p id="recipe-description" class="recipe-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				<ul>
+					<li>Lorem ipsum</li>
+					<li>Lorem ipsum</li>
+				</ul>
+
+				<p id = "rating-text"> Bewerten: <p>
+				<div class="rating" data-average="5" data-id="3"></div>
 			</div>
-			<h4 class = "recipe-text">Rezept:</h4>
-			<p id="recipe-description" class="recipe-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<ul>
-				<li>Lorem ipsum</li>
-				<li>Lorem ipsum</li>
-			</ul>
+			<div id = "ingredients-content">
+				
+
+			</div>
+			<div id = "equipment-content">
+				
+
+			</div>
+			<div id = "fotos-content">
+				
+
+			</div>
+			<div id = "votes-content">
+				
+
+			</div>
+			
 
 		</div>
 		
@@ -51,7 +80,7 @@
 		
 
 		<script src="js/homebutton.js"></script>
-
+		<script src="js/recipescript.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>
