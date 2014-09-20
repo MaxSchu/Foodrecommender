@@ -150,18 +150,6 @@ header{
 
 
 /*recipe styles*/
-#foto-box{
-	width: 500px;
-	height: 250px;
-	background-color: black;
-}
-
-#foto-box-img{
-	display: block;
-	height: 250px;
-	width: auto;
-}
-
 #foto-arrow-left{
 	float: left;
 	margin-top: 105px;
@@ -195,14 +183,24 @@ header{
 	margin-right: 20px;
 }
 
+.star {
+	margin-top: 10px;
+	float: left;
+	clear: both;
+}
+
+.amount {
+	float: right;
+	margin-right: 630px;
+	margin-top: 10px;
+}
+
 /* often occuring styles */
 #main-content{
 	width: 799px;
-	height: calc(100% - 100px);
 	float: left;
 	margin: 0;
-	padding: 0;
-	display: inline; 
+	padding: 0; 
 }
 
 .header {
@@ -214,8 +212,7 @@ header{
 
 .left-nav {
 	float: left;
-	width: 201px;
-	height: calc(100% - 100px); 	
+	width: 201px; 	
 }
 
 .left-nav.border {
@@ -224,9 +221,9 @@ header{
 
 .content{
 	width: 1000px;
-	height: 100%;
+	overflow: auto;
 	margin-left: auto;
-    margin-right: auto;	
+    margin-right: auto;
 	background-color:#B7CEA8;
 }
 

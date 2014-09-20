@@ -17,8 +17,8 @@
 		<!-- JCarousel -->
 		<script type="text/javascript" src="jquery/Jcarousel/jcarousel.basic.js"></script>
 		<script type="text/javascript" src="jquery/Jcarousel/jquery.jcarousel.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="jquery/Jcarousel/css/style.css">
         <link rel="stylesheet" type="text/css" href="jquery/Jcarousel/css/jcarousel.basic.css">
+
 	</head>
 
 	<body>
@@ -36,7 +36,6 @@
 			<button id = "recipe-button" class = "left-navi-button">Rezept</button>
 			<button id = "ingredients-button" class = "left-navi-button">Zutaten</button>
 			<button id = "equipment-button" class = "left-navi-button">Ausrüstung</button>
-			<button id = "fotos-button" class = "left-navi-button">Fotos</button>
 			<button id = "votes-button" class = "left-navi-button">Bewertungen</button>
 		</div>
 
@@ -47,12 +46,12 @@
 				<div class="jcarousel-wrapper">
 	                <div class="jcarousel">
 	                    <ul>
-	                        <li><img src="jquery/Jcarousel/img/img1.jpg" width="600" height="400" alt=""></li>
-	                        <li><img src="jquery/Jcarousel/img/img2.jpg" width="600" height="400" alt=""></li>
-	                        <li><img src="jquery/Jcarousel/img/img3.jpg" width="600" height="400" alt=""></li>
-	                        <li><img src="jquery/Jcarousel/img/img4.jpg" width="600" height="400" alt=""></li>
-	                        <li><img src="jquery/Jcarousel/img/img5.jpg" width="600" height="400" alt=""></li>
-	                        <li><img src="jquery/Jcarousel/img/img6.jpg" width="600" height="400" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img1.jpg" class = "foto-box-image" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img2.jpg" class = "foto-box-image" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img3.jpg" class = "foto-box-image" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img4.jpg" class = "foto-box-image" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img5.jpg" class = "foto-box-image" alt=""></li>
+	                        <li><img src="jquery/Jcarousel/img/img6.jpg" class = "foto-box-image" alt=""></li>
 	                    </ul>
 	                </div>
 
@@ -94,17 +93,21 @@
 				</ul>
 
 			</div>
-			<div id = "fotos-content">
-	            
-			</div>
 			<div id = "votes-content">
-				
+				<h2 class = "center">Thai Curry</h2>
+				<h4 class = "left-text">Bewertungen:</h4>
 
-			</div>
-			
-
-		</div>
-		
+				<div id="5-star" class = "left-text star" data-average="5" data-id="3"></div>
+				<div class = "amount">21</div>
+				<div id="4-star" class = "left-text star" data-average="4" data-id="3"></div>
+				<div class = "amount">18</div>
+				<div id="3-star" class = "left-text star" data-average="3" data-id="3"></div>
+				<div class = "amount">6</div>
+				<div id="2-star" class = "left-text star" data-average="2" data-id="3"></div>
+				<div class = "amount">3</div>
+				<div id="1-star" class = "left-text star" data-average="1" data-id="3"></div>
+				<div class = "amount">0</div>
+		</div>		
 	</div>
 
 		
