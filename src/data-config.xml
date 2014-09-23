@@ -1,0 +1,84 @@
+<span style="font-family: Trebuchet MS, sans-serif;">
+<dataConfig>
+<dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" 
+			url="jdbc:mysql://localhost:3306/foodrecommender" user="root" password="" batchSize="1" />
+  <document name="foodRecommender_doc">
+		<entity name="fr_recipes" query="SELECT * FROM fr_complete">
+    	    <field column="Recipe_ID" name="id" />
+			<field column="Instructions" name="instructions" />
+			<field column="Title" name="title" />
+			<field column="RequiredSkill" name="req_skill" />
+			<field column="TimeToWork" name="time_work" />
+			<field column="TimeToCook" name="time_cook" />
+			<field column="TimeToRest" name="time_rest" />
+			<field column="Vegetarian" name="vegetarian" />
+			<field column="Vegan" name="vegan" />
+			<field column="Diabetus" name="diabetus" />
+			<field column="Sportsman" name="sports" />
+			<field column="Lactose" name="lactose" />
+			<field column="Gluten" name="gluten" />
+			<field column="Pork" name="pork" />
+			<field column="Beef" name="beef" />
+			<field column="Antialc" name="antialc" />
+			<!--
+			<entity name="tags" query="SELECT * FROM fr_tags WHERE Recipes_ID='${fr_recipes.recipe_ID}'">
+					<field column="Recipes_ID" name="recipe_ID" />
+					<field column="Tag" name="tag" />
+					<field column="User" name="user" />
+			</entity>
+			<entity name="ingredients" query="SELECT * FROM fr_ingredients WHERE Recipe_ID='$(fr_recipes.recipe_ID">	
+				<field column="Recipe_ID" name="recipe_ID" />
+				<field column="Name" name="ingredient_name" />
+				<field column="Portion_value" name="portion_value" />
+				<field column="Portion_type" name="portion_type" />
+			</entity>
+		</entity>
+		<entity name="fr_tags" query="SELECT * FROM fr_tags">
+			<field column="Recipes_ID" name="id" />
+			<field column="Tag" name="tag" />
+			<field column="User" name="user" />
+		</entity>	
+		<entity name="fr_ingredients" query="SELECT * FROM fr_ingredients">
+			<field column="Recipe_ID" name="id" />
+			<field column="Name" name="ingredient_name" />
+			<field column="Portion_value" name="portion_value" />
+			<field column="Portion_type" name="portion_type" />
+		-->
+		</entity>
+	</document>
+</dataConfig>
+</span>
+
+
+
+<!-- 
+<entity name="fr_ingredients" query="SELECT * FROM fr_ingredients">
+		<field column="Recipe_ID" name="Recipe_ID" />
+		<field column="Name" name="ingredient_name" />
+		<field column="Portion_value" name="portion_value" />
+		<field column="Portion_type" name="portion_type" />
+	</entity>
+	-->
+
+
+<!--
+<span style="font-family: Trebuchet MS, sans-serif;"><dataConfig>
+
+<dataSource type="FileDataSource" />
+    <document>
+		<entity name="getXml" processor="FileListEntityProcessor" baseDir="D:/Information Retrieval\solr-4.8.0\foodRecommender\fr_data" fileName=".*xml"
+				recursive = "false" rootEntity="false" dataSource="nulL">
+        <entity name="fr_recipes"
+				processor="XPathEntityProcessor" url="${getXml.fileAbsolutePath}"
+				stream="true">
+        <field column="Recipe_ID" name="Recipe_ID" />
+		<field column="Instructions" name="Instructions" />
+		<field column="Title" name="Title" />
+
+        </entity>
+	</entity>
+    </document>
+</dataConfig>
+</span>
+
+-->
