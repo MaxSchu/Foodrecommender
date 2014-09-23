@@ -13,6 +13,17 @@ var Manager;
     Manager.init();
     Manager.store.addByValue('q', '*:*');
     Manager.doRequest();
+    Manager.addWidget(new AjaxSolr.PagerWidget({
+    id: 'pager',
+    target: '#pager',
+    prevLabel: '&lt;',
+    nextLabel: '&gt;',
+    innerWindow: 1,
+    renderHeader: function (perPage, offset, total) {
+    $('#pager-header').html($('<span></span>').text('displaying ' + Math.min(total, offset + 1) + ' to ' + Math.min(total, offset + perPage) + ' of ' + total));
+  }
+}));
   });
+  
 
 })(jQuery);

@@ -11,20 +11,18 @@ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
 
   template: function (doc) {
     var snippet = '';
-    console.log(doc.Instructions);
-    if (doc.Instructions.length > 300) {
-      snippet += doc.Instructions.substring(0, 300);
-      snippet += '<span style="display:none;">' + doc.Instructions.substring(300);
+    if (doc.instructions.length > 300) {
+      snippet += doc.instructions.substring(0, 300);
+      snippet += '<span style="display:none;">' + doc.instructions.substring(300);
       snippet += '</span> <a href="#" class="more">more</a>';
     }
     else {
-      snippet += doc.Instructions;
+      snippet += doc.instructions;
     }
 
-    var output = '<div><h2>' + doc.Title + '</h2>';
+    var output = '<div><h2>' + doc.title + '</h2>';
     output += '<p id="links_' + doc.id + '" class="links"></p>';
     output += '<p>' + snippet + '</p></div>';
-    console.log(output );
     return output;
   }
 });
