@@ -5,7 +5,6 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	</head>
@@ -22,10 +21,12 @@
 
 
 		<div class = "left-nav border">
-			<button id = "personal-button" class = "left-navi-button">Persönliche Daten</button>
-			<button id = "i-like-button" class = "left-navi-button">Ich mag</button>
-			<button id = "i-dont-like-button" class = "left-navi-button">Ich mag nicht</button>
-			<button id = "social-button"class = "left-navi-button">Soziale Netzwerke</button>
+			<ul class = "left-nav-list">
+				<li id = "personal-button" >Persönliche Daten</li>
+				<li id = "i-like-button">Ich mag</li>
+				<li id = "i-dont-like-button">Ich mag nicht</li>
+				<li id = "social-button">Soziale Netzwerke</li>
+			</ul>
 		</div>
 
 				
@@ -82,7 +83,7 @@
 		
 		<script src="js/homebutton.js"></script>
 		<script src="js/profile.js"></script>
-
+		<script src="js/left-nav-script.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>
