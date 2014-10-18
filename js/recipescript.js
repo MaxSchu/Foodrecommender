@@ -1,37 +1,51 @@
 var $recipeContent = $("#recipe-content");
 var $ingredientsContent = $("#ingredients-content");
-var $equipmentContent = $("#equipment-content");
 var $votesContent = $("#votes-content");
 
 $ingredientsContent.hide();
-$equipmentContent.hide();
 $votesContent.hide();
 
 $("#recipe-button").click(function () {
 		$recipeContent.show();
 		$ingredientsContent.hide();
-		$equipmentContent.hide();
 		$votesContent.hide();
+		$("#ingredients-button").fadeTo(500, 0.5);
+		$("#votes-button").fadeTo(500, 0.5);
+		$("#recipe-button").fadeTo(500, 1);
     });
 
 $("#ingredients-button").click(function () {
 		$recipeContent.hide();
 		$ingredientsContent.show();
-		$equipmentContent.hide();
 		$votesContent.hide();
-    });
-
-$("#equipment-button").click(function () {
-		$recipeContent.hide();
-		$ingredientsContent.hide();
-		$equipmentContent.show();
-		$votesContent.hide();
+		$("#ingredients-button").fadeTo(500, 1);
+		$("#votes-button").fadeTo(500, 0.5);
+		$("#recipe-button").fadeTo(500, 0.5);
     });
 $("#votes-button").click(function () {
 		$recipeContent.hide();
 		$ingredientsContent.hide();
-		$equipmentContent.hide();
 		$votesContent.show();
+		$("#ingredients-button").fadeTo(500, 0.5);
+		$("#votes-button").fadeTo(500, 1);
+		$("#recipe-button").fadeTo(500, 0.5);
+    });
+
+$("#recipe-button").mouseover(function () {
+		$("#ingredients-button").fadeTo(0, 0.5);
+		$("#votes-button").fadeTo(0, 0.5);
+		$("#recipe-button").fadeTo(0, 0.8);
+    });
+
+$("#ingredients-button").mouseover(function () {
+		$("#ingredients-button").fadeTo(0, 0.8);
+		$("#votes-button").fadeTo(0, 0.5);
+		$("#recipe-button").fadeTo(0, 0.5);
+    });
+$("#votes-button").mouseover(function () {
+		$("#ingredients-button").fadeTo(0, 0.5);
+		$("#votes-button").fadeTo(0, 0.8);
+		$("#recipe-button").fadeTo(0, 0.5);
     });
 
 $(document).ready(function(){
