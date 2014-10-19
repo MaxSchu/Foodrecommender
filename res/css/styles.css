@@ -104,6 +104,13 @@ footer{
 
 /* Login styles */
 
+#login-content{
+	background-image: linear-gradient(to top, #565656 0%, #656565 100%);
+	background-color: #565656!important;
+	color: #EEEEEE;
+	margin-top: 200px;
+}
+
 #username{
 	position: absolute;
 	left: 100px;
@@ -112,6 +119,7 @@ footer{
 #name-input {
 	position: absolute;
 	left: 200px;
+	top: 14px;
 }
 
 #pw{
@@ -129,7 +137,7 @@ footer{
 #pw-input{
 	position: absolute;
 	left: 200px;
-	top: 50px;
+	top: 64px;
 }
 
 
@@ -139,6 +147,7 @@ footer{
 	height: 120px;
 	margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
 }
 
 /* myrecipes styles */
