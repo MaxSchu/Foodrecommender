@@ -13,22 +13,22 @@
 	<div id = "index-content">
 
 		<header>
-			<div id = "homebutton" class = "border"> HOME</div>
-			<div id = "search" class = "border">Searchbar</div>
+			<div id = "index-header">
+				<input id = "search" type="search" name="fname" text="Suche">
 			
-			<div id = "logo-bar">
-				<a id = "profile" href = "profile.html">Profil</a>
-				<img id = "foodpic" class = "center" src="res/img/lovefood.png"></img>
-				<a id = "my-recipe" href = "myrecipes.html">Meine Rezepte</a>
+				<div id = "profile" class = "">Profil</div>
+				<img id = "foodpic-small" class = "center" src="res/img/lovefood.png"></img>
+				<div id = "my-recipe" class = "">Meine Rezepte</div>
 			</div>
+			
 			
 			
 		</header>
 
-		<main>
+		<div id = "index-main-content">
 			<div id = "suggestions">
 				<div class = "line">
-					<div class = "suggestion">Beliebteste Rezepte</div>
+					<div id="most-wanted" class = "suggestion">Beliebteste Rezepte</div>
 					<div class = "suggestion">Tagesvorschläge</div>
 					<div class = "suggestion">Rezepte für mich</div>
 				</div>
@@ -43,18 +43,18 @@
 					<div class = "suggestion">Rezepte geordnet nach Schwierigkeit</div>
 				</div>				
 			</div>
-		</main>
+		</div>
 
 		
 		<footer>
-			<div >Über uns</div>
+			<div id = "aboutus">Über uns</div>
 		</footer>
 		
 	</div>
 
 		
 
-		<script src="js/homebutton.js"></script>
+		<script src="js/indexscript.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>

@@ -12,57 +12,69 @@ header{
 	
 }
 
+footer{
+	width: 1000px;
+	background-color: #565656;
+	color: #EEEEEE;
+}
+
 
 
 /* Index styles */
 #index-content{
 	width: 1000px;
 	margin-left: auto;
-    margin-right: auto;	
+    margin-right: auto;
 	background-image: linear-gradient(to top, #f2f2f2 0%, #fff 100%);
 	position: relative;
 	height: auto;
 	min-height: 100% !important;
 }
 
-#homebutton{
-	float: left;
-	width: 200px;
+#index-main-content{
+	margin-top: 40px;
+}
+
+#index-header{
+	background-color: #565656;
+	position: relative;
 	height: 100px;
-	text-align: center;
-	line-height: 100px;
 	color: #EEEEEE;
 }
-#homebutton.border{
-	border-left: none;
-	border-bottom: none;
-	border-top: none;
 
-}
 #search{
-	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 30px;
+	width: 400px;
 }
-
-
-#logo-bar{
-	position: relative;
-	width: 100%;
-}
-
 
 #foodpic{
 	display: block;
 }
 
-#profil{
+#profile{
 	position: absolute;
-	left: 0;
+	width: 200px;
+	height: 70px;
+	right: 200px;
+	top: 30px;
+	text-align: center;
+	line-height: 70px;;
 }
 
+#profile:hover, #my-recipe:hover{
+	background-color: #939393;
+}
 #my-recipe{
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 30px;
+	text-align: center;
+	line-height: 70px;
+	width: 200px;
+	height: 70px;
 }
 
 .line {
@@ -75,14 +87,19 @@ header{
 }
 
 .suggestion{
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
-	width: 300px;
-	height: 300px;
+	border-color: #565656;
+	border-width: 4px;
+	border-style: outset;
+	background-image: linear-gradient(to top, #f2f2f2 0%, #fff 100%);
+	width: 296px;
+	height: 296px;
 	margin-left: 10px;
 	margin-right: 10px;
 	float: left;
+}
+
+.suggestion:hover {
+	border-style: inset;
 }
 
 /* Login styles */
@@ -125,12 +142,7 @@ header{
 }
 
 /* myrecipes styles */
-#foodpic-small{
-	height: 100px;
-	width: auto;
-	display: block;
-	margin-bottom: 0;
-}
+
 
 #safed-recipes {
 	display: block;
@@ -252,14 +264,11 @@ header{
  	line-height: 50px;
  	margin: 0;
  	color: #eeeeee;
+ 	opacity: .7;
 }
 
-ul:hover li {
-    opacity: .5;
-}
-
-ul li:hover {
-    opacity: 1;
+.hover {
+    opacity: .9!important;
 }
 
 
@@ -296,7 +305,21 @@ h2.center, h4.center, p.center, h3.center{
 	padding: 0;
 }
 
+#homebutton{
+	float: left;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	color: #EEEEEE;
+}
 
+#homebutton.border{
+	border-left: none;
+	border-bottom: none;
+	border-top: none;
+
+}
 
 .left-text{
 	margin-left: 20px;
@@ -304,4 +327,11 @@ h2.center, h4.center, p.center, h3.center{
 
 .right-text{
 	margin-right: 20px;
+}
+
+#foodpic-small{
+	height: 100px;
+	width: auto;
+	display: block;
+	margin-bottom: 0;
 }

@@ -1,15 +1,22 @@
-$(".left-navi-button").click(function () {
-		window.location = "myrecipes.html";
+$("#saved-by-me").show();
+$("#remember").hide();
+$("#rated").hide();
+
+$(".ln-button1").click(function () {
+		console.log("sdfsadflkj");
+		$("#saved-by-me").show();
+		$("#remember").hide();
+		$("#rated").hide();
     });
 
-$("#safed-recipes").click(function () {
-		window.location = "myrecipessaved.html";
+$(".ln-button2").click(function () {
+		$("#saved-by-me").hide();
+		$("#remember").show();
+		$("#rated").hide();
     });
 
-$("#my-recipes").click(function () {
-		window.location = "myrecipescreatedbyme.html";
-    });
-
-$("#my-voting").click(function () {
-		window.location = "myrecipesreviews.html";
+$(".ln-button3").click(function () {
+		$("#saved-by-me").hide();
+		$("#remember").hide();
+		$("#rated").show();
     });
