@@ -11,7 +11,8 @@ var Manager;
       target: '#docs'
     }));
     Manager.init();
-    Manager.store.addByValue('q', '*:*');
+    Manager.store.addByValue('q', 'Wald');
+    Manager.store.addByValue('rows', '1');
     Manager.doRequest();
     Manager.addWidget(new AjaxSolr.PagerWidget({
     id: 'pager',
