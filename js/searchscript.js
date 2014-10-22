@@ -58,3 +58,18 @@ function checkList (input) {
 $("#send").click(function () {
 		
     });
+
+
+//UI Steuerung
+$("#result-list").show();
+$("#advanced-search").hide();
+
+$(".ln-button1").click(function () {
+		$("#result-list").show();
+		$("#advanced-search").hide();
+    });
+
+$(".ln-button2").click(function () {
+		$("#result-list").hide();
+		$("#advanced-search").show();
+    });

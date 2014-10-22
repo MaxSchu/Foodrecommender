@@ -202,10 +202,12 @@ img.red:hover, img.green:hover {
 	float: right;
 	margin-right: 100px;
 	margin-top: 100px;
+	margin-bottom: 30px;
 }
 
 .button:hover {
 	opacity: 0.8;
+	cursor: pointer;
 }
 
 /* Login styles */
