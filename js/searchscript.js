@@ -1,30 +1,45 @@
-var $searchContent = $("#search-content");
-var $menusearchContent = $("#menusearch-content");
-var $causesearchContent = $("#causesearch-content");
+var $red = $("#red");
+var $green = $("#green");
+var $tagInput = $("#ingredients-input");
+var listCount = 0;
+var tagArray = [];
 
-$menusearchContent.hide();
-$causesearchContent.hide();
-
-$("#search-button").click(function () {
-		$searchContent.show();
-		$menusearchContent.hide();
-		$causesearchContent.hide();
+$red.click(function () {
+		addTag("red");
     });
 
-$("#menusearch-button").click(function () {
-		$searchContent.hide();
-		$menusearchContent.show();
-		$causesearchContent.hide();
+$green.click(function () {
+		addTag("green");
     });
 
-$("#causesearch-button").click(function () {
-		$searchContent.hide();
-		$menusearchContent.hide();
-		$causesearchContent.show();
-    });
+function addTag (color) {
+	var input = $tagInput.val();
 
+	if(input != ""){
+		$item = $('<li id = "' + listCount + '"class = "ingredients-tag ' + color + '">' + input + ' <img class = "x" src="res/img/x.png"></li>');
+		$item.click(function () {
+			$(this).remove();
+			removeTag($(this).html());
+    	});
+    	tagArray.push(input);
+		$("#tag-list").append($item);
+		listCount++;
+		console.log(tagArray);
+	}
+}
 
-var $leftNav = $(".left-nav");
-if($leftNav != null){
-	$leftNav.height($("#main-content").height()+40);
+function removeTag (tag) {
+	var check = true;
+	newTag = "";
+	for(var i = 0; i < tag.length; i ++) {
+		if(tag[i] == ' '){
+			check = false;
+		}
+		if(check){
+			newTag +=tag[i]
+		}		
+	}
+	listCount--;
+	var index = tagArray.indexOf(newTag);
+	tagArray.splice(index, 1);
 }

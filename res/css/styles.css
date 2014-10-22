@@ -102,13 +102,94 @@ footer{
 	border-style: inset;
 }
 
+/* Search styles*/
+#search-input {
+	width: 600px;
+	height: 20px;
+	line-height: 100%;
+}
+
+#used-tags{
+	height: 200px;
+	width: 400px;
+	background-color: #EEEEEE;
+	overflow: auto;
+}
+
+#ingredients-input{
+	padding: 0;
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.red-border {
+	border-style: solid;
+	border-color: red;
+}
+
+.ingredients-tag {
+	background-color: #565656;
+	border-style: solid;
+	border-color: #565656;
+	border-radius: 5px;
+	display: inline-block;
+	color: #EEEEEE;
+	float: left;
+	margin: 5px;
+}
+
+.ingredients-tag:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.red {
+	background-color: #852F30!important;
+	border-color: #852F30;
+}
+
+.green {
+	background-color: #30602A!important;
+	border-color: #30602A;	
+}
+
+img.red, img.green {
+	float: left;
+	border-radius: 20px;
+	margin-top: 15px;
+}
+img.red:hover, img.green:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.x{
+	width: 10px;
+	height: 10px;
+}
+
+#tag-list {
+	list-style: none;
+	margin: 5px;
+	padding: 0;
+}
+
+.check {
+}
+
+#vg {
+	display: inline;
+}
+
 /* Login styles */
 
 #login-content{
 	background-image: linear-gradient(to top, #565656 0%, #656565 100%);
 	background-color: #565656!important;
 	color: #EEEEEE;
-	margin-top: 200px;
+	margin-top: 100px;
 }
 
 #username{

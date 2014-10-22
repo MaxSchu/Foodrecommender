@@ -22,29 +22,54 @@
 
 
 		<div class = "left-nav border">
-			<button id = "search-button" class = "left-navi-button ln-button1">Rezept</button>
-			<button id = "menusearch-button" class = "left-navi-button ln-button2">Zutaten</button>
-			<button id = "causesearch-button" class = "left-navi-button ln-button3">Ausrüstung</button>
+			<ul class = "left-nav-list">			
+				<li id = "search-button" class = "left-navi-button ln-button1">Rezept</li>
+				<li id = "menusearch-button" class = "left-navi-button ln-button2">Zutaten</li>
+				<li id = "causesearch-button" class = "left-navi-button ln-button3">Ausrüstung</li>
+			</ul>
 		</div>
 
 				
 		<div id = "main-content">
-			<div id ="search-content">
-				
+			<h2 class = "center">Erweiterte Suche</h2>
+			<p>Name:</p>
+			<input id = "search-input" type = "text">
+			<p>Zutaten:</p>
+			<div id = "used-tags">
+				<ul id = "tag-list">
+					<li id = "tag1" class = "ingredients-tag red">Gurken <img class = "x" src="res/img/x.png"></li>
+					<li id = "tag1" class = "ingredients-tag green">Salz <img class = "x" src="res/img/x.png"></li>
+				</ul>
 			</div>
-			<div id = "menusearch-content">
-
-			</div>
-			<div id = "causesearch-content">
-
-			</div>
+			<img id = "red"class = "red" src="res/img/-.png"></img>		
+			<input id = "ingredients-input" type = "text" list = "tags">			
+			<img id = "green" class = "green" src="res/img/+.png"></img><br>
+			<input id = "vg" class = "check" type = "checkbox" value = "Vegan">
+			<input id = "vgt" class = "check"type = "checkbox" value = "Vegetarisch">
+			<input id = "meat" class = "check"type = "checkbox" value = "Fleisch">
+			<input id = "lakt" class = "check"type = "checkbox" value = "Laktosefrei">
 		</div>		
 	</div>
 
 		
+		<datalist id="tags">
+			<option value="Gurken">
+			<option value="Senf">
+			<option value="Apfel">
+			<option value="Kartoffel">
+			<option value="Zimt">
+			<option value="Erdnüsse">
+			<option value="Rotwein">
+			<option value="Tomaten">
+			<option value="Chilli">
+			<option value="Zwiebel">
+			<option value="Knoblauch">
+			<option value="Salz">
+		</datalist>
 
 		<script src="js/homebutton.js"></script>
-		<script src="js/seachscript.js"></script>
+		<script src="js/searchscript.js"></script>
+		<script src="js/left-nav-script.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>
