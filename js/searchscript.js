@@ -14,8 +14,9 @@ $green.click(function () {
 
 function addTag (color) {
 	var input = $tagInput.val();
-
-	if(input != ""){
+	console.log(checkList(input));
+	if(input != "" && checkList(input)){
+		$tagInput.removeClass("red-border");
 		$item = $('<li id = "' + listCount + '"class = "ingredients-tag ' + color + '">' + input + ' <img class = "x" src="res/img/x.png"></li>');
 		$item.click(function () {
 			$(this).remove();
@@ -25,6 +26,8 @@ function addTag (color) {
 		$("#tag-list").append($item);
 		listCount++;
 		console.log(tagArray);
+	}else {
+		$tagInput.addClass("red-border");
 	}
 }
 
@@ -43,3 +46,15 @@ function removeTag (tag) {
 	var index = tagArray.indexOf(newTag);
 	tagArray.splice(index, 1);
 }
+
+function checkList (input) {
+	if(tagArray.indexOf(input) == -1) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
+$("#send").click(function () {
+		
+    });
