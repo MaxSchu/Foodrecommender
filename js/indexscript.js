@@ -9,4 +9,5 @@ $("#most-wanted").click(function () {
     });
 $("#aboutus").click(function () {
 		window.location = "aboutus.html";
+
     });
