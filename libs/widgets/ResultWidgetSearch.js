@@ -20,7 +20,7 @@ AjaxSolr.ResultWidgetSearch = AjaxSolr.AbstractWidget.extend({
       snippet += doc.ingredient_name;
     }
 
-    var output = '<div><h2>' + doc.title + '</h2>';
+    var output = '<div><h2><a href="recipe.html?id='+ doc.id + '">' + doc.title + '</a></h2>';
     output += '<p id="links_' + doc.id + '" class="links"></p>';
     output += '<p>' + snippet + '</p></div>';
     return output;
