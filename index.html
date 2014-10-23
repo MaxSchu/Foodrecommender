@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		  <link rel="stylesheet" href="res/css/styles.css">
 		<meta charset="utf-8">
-		  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<title>Foodrecommender</title>
+		<link rel="stylesheet" href="res/css/styles.css">
+		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	</head>
 
 	<body>
+	<div id = "index-content">
 
-	  <div id="wrap">
-    <div id="header">
-      <h1>LoveFood</h1>
-      <h2>FoodRecommender</h2>
-    </div>
+		<header>
+			<div id = "index-header">
+				<div id = "s">Suche:</div> <form method="Link" action="search.html"><input id = "search" type="search" name="fname" text="Suche"></form>
+			
+				<div id = "profile" class = "">Profil</div>
+				<img id = "foodpic-small" class = "center" src="res/img/lovefood.png"></img>
+				<div id = "my-recipe" class = "">Meine Rezepte</div>
+			</div>
+			
+			
+			
+		</header>
 
-    <div class="right">
-      <div id="result">
-        <div id="navigation">
-          <ul id="pager"></ul>
-          <div id="pager-header"></div>
-        </div>
-        <div id="docs"></div>
-      </div>
-    </div>
+		<div id = "index-main-content">
+			<div id = "suggestions">
+				<div class = "line">
+					<div id="most-wanted" class = "suggestion">Beliebteste Rezepte</div>
+					<div class = "suggestion">Tagesvorschläge</div>
+					<div class = "suggestion" >Rezepte für mich		<div id = "result" > </div></div>
+				
+				</div>
+				<div class = "line">
+					<div class = "suggestion">Menüvorschläge</div>
+					<div class = "suggestion">Aktuelle Anlässe</div>
+					<div class = "suggestion">Nationalitätsgerichte</div>
+				</div>
+				<div class = "line">
+					<div class = "suggestion">Bestbewertete Gerichte</div>
+					<div class = "suggestion" id = "fastFood">schnell zubereitete Gerichte</div>
+					<div class = "suggestion">Rezepte geordnet nach Schwierigkeit</div>
+				</div>				
+			</div>
+		</div>
 
-    <div class="left">
-      <h2>Current Selection</h2>
-      <ul id="selection"></ul>
-
-      <h2>Search</h2>
-      <span id="search_help">(press ESC to close suggestions)</span>
-      <ul id="search">
-        <input type="text" id="query" name="query" autocomplete="off">
-      </ul>
-
-      <div class="tagcloud" id="topics"></div>
-
-      <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
 		
+		<footer>
+			<div id = "aboutus">Über uns</div>
+		</footer>
+		
+	</div>
+
+		
+
+		<script src="js/indexscript.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>
@@ -51,9 +65,8 @@
 		<script src="libs/core/AbstractWidget.js"></script>
 		<script src="libs/core/AbstractFacetWidget.js"></script>
 		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
 		<script src="libs/widgets/ResultWidget.js"></script>
-		<script src="libs/widgets/PagerWidget.js"></script>
+		<script src="libs/core/lovefoodIndex.js"></script>
 
 		
 

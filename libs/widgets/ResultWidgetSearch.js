@@ -1,6 +1,6 @@
 (function ($) {
 
-AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
+AjaxSolr.ResultWidgetSearch = AjaxSolr.AbstractWidget.extend({
   afterRequest: function () {
     $(this.target).empty();
     for (var i = 0, l = this.manager.response.response.docs.length; i < l; i++) {
@@ -11,16 +11,16 @@ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
 
   template: function (doc) {
     var snippet = '';
-    if (doc.ingredient_name.length > 100) {
-      snippet += doc.ingredient_name.substring(0, 100);
-      snippet += '<span style="display:none;">' + doc.ingredient_name.substring(100);
+    if (doc.ingredient_name.length > 300) {
+      snippet += doc.ingredient_name.substring(0, 300);
+      snippet += '<span style="display:none;">' + doc.ingredient_name.substring(300);
       snippet += '</span> <a href="#" class="more">more</a>';
     }
     else {
       snippet += doc.ingredient_name;
     }
 
-    var output = '<div><h2><a href="recipe.html?id='+ doc.id + '">' + doc.title + '</a></h2>';
+    var output = '<div><h2>' + doc.title + '</h2>';
     output += '<p id="links_' + doc.id + '" class="links"></p>';
     output += '<p>' + snippet + '</p></div>';
     return output;

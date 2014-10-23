@@ -1,3 +1,18 @@
+var locate = window.location
+document.search.getContent.value = locate
+
+var text = document.search.getContent.value
+
+function delineate(str)
+{
+returnText = str.indexOf("=")+1;
+return(str.substring(returnText ));
+
+}
+console.log(delineate(text));
+
+//document.getElementById("query").innerHTML = "Suche nach: " + delineate(text);
+
 var Manager;
 
 (function ($) {
@@ -6,12 +21,13 @@ var Manager;
     Manager = new AjaxSolr.Manager({
       solrUrl: 'http://localhost:8983/solr/foodRecommender/'
     });
-    Manager.addWidget(new AjaxSolr.ResultWidget({
+    Manager.addWidget(new AjaxSolr.ResultWidgetSearch({
       id: 'result',
       target: '#docs'
     }));
     Manager.init();
-    Manager.store.addByValue('q', '*:*');
+    Manager.store.addByValue('q', delineate(text));
+    Manager.store.addByValue('rows', '10');
     Manager.doRequest();
     Manager.addWidget(new AjaxSolr.PagerWidget({
     id: 'pager',
