@@ -58,7 +58,7 @@ var Manager;
 
 })(jQuery);
 
-getProfileTagString();
+
 function getProfileTagString() {
   var query = "";
 
@@ -75,6 +75,5 @@ function getProfileTagString() {
       }
     }
   }
-  console.log(query);
   return query;
 }

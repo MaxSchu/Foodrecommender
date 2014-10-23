@@ -20,3 +20,23 @@ var Manager;
   
 
 })(jQuery);
+
+
+function getProfileTagString() {
+  var query = "";
+
+  if(localStorage.getItem("taglist") != null) {
+    var tagArray = JSON.parse(localStorage.getItem("taglist"));
+    var colorArray = JSON.parse(localStorage.getItem("colorlist"));
+
+    for(var i = 0; i < tagArray.length; i++) {
+      if(colorArray[i] == "red"){
+        query += "-"+tagArray[i];
+      }
+      if(colorArray[i] == "green"){
+        query += "+"+tagArray[i];
+      }
+    }
+  }
+  return query;
+}
