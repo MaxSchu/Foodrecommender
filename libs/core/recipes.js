@@ -1,7 +1,7 @@
-var locate = window.location
-document.search.getContent.value = locate
+var locate = window.location;
+document.search.getContent.value = locate;
 
-var text = document.search.getContent.value
+var text = document.search.getContent.value;
 
 function delineate(str)
 {
@@ -21,10 +21,6 @@ return(ingredientString);
 
 }
 console.log(delineate(text));
-queryString = delineate(text);
-queryString = queryString.replace(/AND/g, "");
-document.getElementById("query").innerHTML = "Suche nach: " + queryString;
-
 var Manager;
 
 (function ($) {
@@ -33,25 +29,37 @@ var Manager;
     Manager = new AjaxSolr.Manager({
       solrUrl: 'http://localhost:8983/solr/foodRecommender/'
     });
-    Manager.addWidget(new AjaxSolr.ResultWidgetSearch({
-      id: 'result',
-      target: '#docs'
+    Manager.addWidget(new AjaxSolr.ResultWidgetRecipe({
+      target: '#ingredients-content'
     }));
     Manager.init();
-    Manager.store.addByValue('q', delineate(text));
+    Manager.store.addByValue('q', "id:"+delineate(text));
     Manager.store.addByValue('rows', '10');
     Manager.doRequest();
-    Manager.addWidget(new AjaxSolr.PagerWidget({
-    id: 'pager',
-    target: '#pager',
-    prevLabel: '&lt;',
-    nextLabel: '&gt;',
-    innerWindow: 1,
-    renderHeader: function (perPage, offset, total) {
-    $('#pager-header').html($('<span></span>').text('Ergebnisse ' + Math.min(total, offset + 1) + ' bis ' + Math.min(total, offset + perPage) + ' von ' + total));
-  }
-}));
   });
   
 
 })(jQuery);
+
+/*
+
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+//xmlhttp.open("GET","getRecipe.php?q="+delineate(text),true);  
+xmlhttp.open("GET","http://localhost:8983/solr/foodRecommender/select?q=id%" +  delineate(text) + "%0A&wt=xml&indent=true",true);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+console.log(xmlDoc);
+txt="";
+x = xmlDoc.getElementsByTagName("title");
+txt = x[0];
+document.getElementById("recipe-title").innerHTML = "Hallo";
+
+*/
