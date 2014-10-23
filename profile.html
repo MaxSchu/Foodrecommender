@@ -47,13 +47,15 @@
 
 			<div id = "like-ingredient-profile">
 				<h4 class = "center"> In meinen Gerichten lege ich viel Wert auf folgende Zutaten: </h4>
-				<div class = "ingredient-choice border center">
-					<ul>
-						<li>Bohnen</li>
-						<li>Salami</li>
-						<li>Fisch</li>
+				<p>Zutaten:</p>
+				<div id = "used-tags">
+					<ul id = "tag-list">
+						
 					</ul>
-				</div>		
+				</div>
+				<img id = "red"class = "red" src="res/img/-.png"></img>		
+				<input id = "ingredients-input" type = "text" list = "tags">			
+				<img id = "green" class = "green" src="res/img/+.png"></img>	
 			</div>
 
 			<div id = "dislike-ingredient-profile">
@@ -84,6 +86,7 @@
 		<script src="js/homebutton.js"></script>
 		<script src="js/profile.js"></script>
 		<script src="js/left-nav-script.js"></script>
+		<script src="js/tagsystem.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>

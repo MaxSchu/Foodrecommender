@@ -1,10 +1,3 @@
-
-var quicksearch;
-if((quicksearch = localStorage.getItem("quicksearch") )!= null) {
-	//hier passiert zeug mit der quicksearch query
-}
-
-
 var $red = $("#red");
 var $green = $("#green");
 var $tagInput = $("#ingredients-input");
@@ -59,28 +52,3 @@ function checkList (input) {
 		return false;
 	}
 }
-
-function getAdvancedSearchParameters() {
-
-}
-
-
-
-//UI Steuerung
-$("#result-list").show();
-$("#advanced-search").hide();
-
-$(".ln-button1").click(function () {
-		$("#result-list").show();
-		$("#advanced-search").hide();
-    });
-
-$(".ln-button2").click(function () {
-		$("#result-list").hide();
-		$("#advanced-search").show();
-    });
-
-
-$("#send").click(function () {
-		
-    });

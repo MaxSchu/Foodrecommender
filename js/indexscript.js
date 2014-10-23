@@ -10,3 +10,11 @@ $("#most-wanted").click(function () {
 $("#aboutus").click(function () {
 		window.location = "aboutus.html";
     });
+
+$("#search").keyup(function(e){
+    if(e.keyCode == 13)
+    {
+        window.location = "search.html";
+        localStorage.setItem("quicksearch", $(this).val());
+    }
+});
