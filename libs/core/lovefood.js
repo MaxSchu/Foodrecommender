@@ -21,8 +21,9 @@ return(ingredientString);
 
 }
 console.log(delineate(text));
-
-//document.getElementById("query").innerHTML = "Suche nach: " + delineate(text);
+queryString = delineate(text);
+queryString = queryString.replace(/AND/g, "");
+document.getElementById("query").innerHTML = "Suche nach: " + queryString;
 
 var Manager;
 
