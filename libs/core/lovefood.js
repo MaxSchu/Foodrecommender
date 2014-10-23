@@ -6,7 +6,18 @@ var text = document.search.getContent.value
 function delineate(str)
 {
 returnText = str.indexOf("=")+1;
-return(str.substring(returnText ));
+ingredientString = str.substring(returnText);
+
+ingredientString = ingredientString.replace(/\+/g, " AND " );
+ingredientString = ingredientString.replace(/%C3/g, "" );
+ingredientString = ingredientString.replace(/%84/g, "Ä" );
+ingredientString = ingredientString.replace(/%9C/g, "Ü" );
+ingredientString = ingredientString.replace(/%96/g, "Ö" );
+ingredientString = ingredientString.replace(/%A4/g, "ä" );
+ingredientString = ingredientString.replace(/%BC/g, "ü" );
+ingredientString = ingredientString.replace(/%B6/g, "ö" );
+
+return(ingredientString);
 
 }
 console.log(delineate(text));
