@@ -23,6 +23,7 @@ function addTag (color) {
     	});
     	tagArray.push(input);
 		$("#tag-list").append($item);
+		updateLocalStorage();
 		listCount++;
 	}else {
 		$tagInput.addClass("red-border");
@@ -43,6 +44,7 @@ function removeTag (tag) {
 	listCount--;
 	var index = tagArray.indexOf(newTag);
 	tagArray.splice(index, 1);
+	updateLocalStorage();
 }
 
 function checkList (input) {
@@ -52,3 +54,13 @@ function checkList (input) {
 		return false;
 	}
 }
+
+console.log(document.location.href.match(/[^\/]+$/)[0]);
+
+function updateLocalStorage() {
+	if(document.location.href.match(/[^\/]+$/)[0] == "profile.html"){
+		localStorage.setItem("taglist", JSON.stringify(tagArray));
+	}
+	console.log(localStorage.getItem("taglist"));
+}
+
