@@ -7,8 +7,10 @@ function delineate(str)
 {
 returnText = str.indexOf("=")+1;
 ingredientString = str.substring(returnText);
+ingredientString += getProfileTagString();
 
 ingredientString = ingredientString.replace(/\+/g, " AND " );
+ingredientString = ingredientString.replace(/\-/g, " NOT " );
 ingredientString = ingredientString.replace(/%C3/g, "" );
 ingredientString = ingredientString.replace(/%84/g, "Ä" );
 ingredientString = ingredientString.replace(/%9C/g, "Ü" );
@@ -22,7 +24,7 @@ return(ingredientString);
 }
 console.log(delineate(text));
 queryString = delineate(text);
-queryString = queryString.replace(/AND/g, "");
+
 document.getElementById("query").innerHTML = "Suche nach: " + queryString;
 
 var Manager;
@@ -56,7 +58,7 @@ var Manager;
 
 })(jQuery);
 
-
+getProfileTagString();
 function getProfileTagString() {
   var query = "";
 

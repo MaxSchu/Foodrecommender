@@ -4,9 +4,6 @@ $("#my-recipe").click(function () {
 $("#profile").click(function () {
 		window.location = "profile.html";
     });
-$("#most-wanted").click(function () {
-		window.location = "recipe.html";
-    });
 $("#aboutus").click(function () {
 		window.location = "aboutus.html";
 
