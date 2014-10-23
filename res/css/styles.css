@@ -273,6 +273,40 @@ img.red:hover, img.green:hover {
 	display: block;
 }
 
+.recipe-list li{
+	position: relative;
+	list-style: none;
+	border-style: solid;
+	border-color: #565656;
+	border-width: 1px;
+	height: 100px;
+	background-image: linear-gradient(to top, #f2f2f2 0%, #fff 100%);
+}
+
+.recipe-list {
+	padding: 0;
+}
+
+.recipe-list img {
+	float: left;
+}
+
+.recipe-list button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	background-color: #565656;
+	color: #EEEEEE;
+}
+
+.medium-image {
+	width: auto;
+	height: 100px;
+	display: block;
+}
+
 /*profile styles*/
 .ingredient-choice{
 	width: 400px;
