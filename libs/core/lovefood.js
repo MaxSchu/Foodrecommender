@@ -6,9 +6,12 @@ var text = document.search.getContent.value;
 function delineate(str)
 {
 returnText = str.indexOf("=")+1;
-ingredientString = str.substring(returnText);
-ingredientString += getProfileTagString();
-
+ingredientString = "" + str.substring(returnText);
+if(ingredientString.length == 0){
+  ingredientString = getProfileTagString().substring(1);
+} else {
+ingredientString += getProfileTagString(); 
+}
 ingredientString = ingredientString.replace(/\+/g, " AND " );
 ingredientString = ingredientString.replace(/\-/g, " NOT " );
 ingredientString = ingredientString.replace(/%C3/g, "" );
@@ -65,6 +68,7 @@ function getProfileTagString() {
   if(localStorage.getItem("taglist") != null) {
     var tagArray = JSON.parse(localStorage.getItem("taglist"));
     var colorArray = JSON.parse(localStorage.getItem("colorlist"));
+
 
     for(var i = 0; i < tagArray.length; i++) {
       if(colorArray[i] == "red"){
