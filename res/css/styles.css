@@ -460,6 +460,12 @@ h2.center, h4.center, p.center, h3.center{
 
 /* result list + widgets*/
 
+.widget-style{
+  margin-right: 5px;
+  font-size: 11px;
+
+}
+
 #result-list{
 	height:auto;
 	width:auto;
@@ -467,10 +473,7 @@ h2.center, h4.center, p.center, h3.center{
 	font-size: 12px;
 }
 
-#result  {
-  margin-right: 5px;
-  font-size: 11px;
-}
+
 #navigation {
   border-bottom: 1px solid #000;
 }
