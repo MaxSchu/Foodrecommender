@@ -280,7 +280,8 @@ img.red:hover, img.green:hover {
 	border-color: #565656;
 	border-width: 1px;
 	height: 100px;
-	background-image: linear-gradient(to top, #f2f2f2 0%, #fff 100%);
+	background-image: linear-gradient(to top, #989898 0%, #767676 100%);
+	color: #EEEEEE;
 }
 
 .recipe-list {
@@ -304,7 +305,6 @@ img.red:hover, img.green:hover {
 .medium-image {
 	width: auto;
 	height: 100px;
-	display: block;
 }
 
 /*profile styles*/
@@ -324,6 +324,10 @@ img.red:hover, img.green:hover {
     display: block;
     height: 250px;
     width: auto;
+}
+
+#docs a {
+	color: #EEEEEE;
 }
 
 #foto-arrow-left{
@@ -507,6 +511,9 @@ h2.center, h4.center, p.center, h3.center{
 	font-size: 12px;
 }
 
+#result{
+	width: 750px;
+}
 
 #navigation {
   border-bottom: 1px solid #000;
@@ -527,7 +534,21 @@ h2.center, h4.center, p.center, h3.center{
 #selection li {
   list-style-type: none;
 }
-#docs {
+#docs div{
+	background-image: linear-gradient(to top, #989898 0%, #767676 100%);
+	border-style: solid;
+	border-width: 1px;
+	border-color: #565656;
+	color: #EEEEEE;
+	margin-bottom: 1px;
+	height: 100px;
+}
+
+.result-img {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-right: 4px;
 }
 
 #query {
