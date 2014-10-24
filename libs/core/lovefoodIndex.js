@@ -85,7 +85,7 @@ var Manager;
       target: '#time_easy'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " time_cook:0";
+    queryString = getProfileTagString() + " time_cook:[0 TO 15]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -103,7 +103,7 @@ var Manager;
       target: '#time_med'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " time_cook:25";
+    queryString = getProfileTagString() + " time_cook:[15 TO 40]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -121,7 +121,7 @@ var Manager;
       target: '#time_hard'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " time_cook:[50 TO 75]";
+    queryString = getProfileTagString() + " time_cook:{40 TO 90";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();

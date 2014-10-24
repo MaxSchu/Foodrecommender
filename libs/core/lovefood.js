@@ -26,6 +26,7 @@ ingredientString = ingredientString.replace(/%96/g, "Ö" );
 ingredientString = ingredientString.replace(/%A4/g, "ä" );
 ingredientString = ingredientString.replace(/%BC/g, "ü" );
 ingredientString = ingredientString.replace(/%B6/g, "ö" );
+ingredientString = ingredientString.replace(/%3A/g, ":" );
 
 return(ingredientString);
 
