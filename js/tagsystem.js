@@ -85,3 +85,12 @@ function initTagList() {
 		}
 	}
 }
+
+function getTagList() {
+	return tagArray;
+}
+
+function getColorList() {
+	return colorArray;
+}
+

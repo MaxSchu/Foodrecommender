@@ -132,14 +132,12 @@ var Manager;
 
 
 
-
 function getProfileTagString() {
   var query = "";
 
   if(localStorage.getItem("taglist") != null) {
     var tagArray = JSON.parse(localStorage.getItem("taglist"));
     var colorArray = JSON.parse(localStorage.getItem("colorlist"));
-
 
     for(var i = 0; i < tagArray.length; i++) {
       if(colorArray[i] == "red"){
@@ -149,12 +147,11 @@ function getProfileTagString() {
         query += "+"+tagArray[i];
       }
     }
-  }
- 
+  } 
 
    if(query.indexOf("+") == 0){
-  query = query.substring(1);
-  }  
+    query = query.substring(1);
+   }  
 ingredientString = query;
 ingredientString = ingredientString.replace(/\+/g, " AND " );
 ingredientString = ingredientString.replace(/\-/g, " NOT " );
