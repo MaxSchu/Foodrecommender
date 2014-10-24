@@ -443,7 +443,10 @@ img.red:hover, img.green:hover {
 .center {
     margin-left: auto;
     margin-right: auto;
+    float: none!important;
 }
+
+
 
 .border {
 	border-style: solid;
