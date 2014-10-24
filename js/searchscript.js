@@ -19,7 +19,7 @@ function getAdvancedSearchParameters() {
 		query+= " AND vegan:true";
 	}
 	if($("#vgt").is(":checked")){
-		query+= " AND vegatarian:true";
+		query+= " AND vegetarian:true";
 	}
 	if($("#lakt").is(":checked")){
 		query+= " AND lactose:true";
