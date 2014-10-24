@@ -8,7 +8,12 @@ function delineate(str)
 returnText = str.indexOf("=")+1;
 ingredientString = "" + str.substring(returnText);
 if(ingredientString.length == 0){
+  console.log(getProfileTagString().indexOf("+"));
+  if(getProfileTagString().indexOf("+") == 0){
   ingredientString = getProfileTagString().substring(1);
+} else {
+  ingredientString = getProfileTagString();
+}
 } else {
 ingredientString += getProfileTagString(); 
 }
