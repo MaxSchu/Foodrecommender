@@ -22,13 +22,33 @@ function getAdvancedSearchParameters() {
 		query+= " + vegetarian:true";
 	}
 	if($("#pork").is(":checked")){
-		query+= " + pork:true";
+		query+= " + pork:false";
 	}
 	if($("#beef").is(":checked")){
-		query+= " + beef:true";
+		query+= " + beef:false";
 	}
 	if($("#alc").is(":checked")){
 		query+= " + antialc:true";
+	}
+
+	if($("#easy").is(":checked")){
+		query+= " + req_skill:0";
+	}
+	if($("#med").is(":checked")){
+		query+= " + req_skill:25";
+	}
+	if($("#dif").is(":checked")){
+		query+= " + req_skill:[50 TO 75]";
+	}
+
+	if($("#low").is(":checked")){
+		query+= " + time_cook:[0 TO 15]";
+	}
+	if($("#mid").is(":checked")){
+		query+= " + time_cook:[15 TO 40]";
+	}
+	if($("#high").is(":checked")){
+		query+= " + time_cook:{40 TO 90}";
 	}
 
 	return query;
