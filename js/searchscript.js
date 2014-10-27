@@ -59,6 +59,13 @@ function getAdvancedSearchParameters() {
 //UI Steuerung
 $("#result-list").show();
 $("#advanced-search").hide();
+if(localStorage.getItem("adv-search")=="true") {
+	$("#result-list").hide();
+	$("#advanced-search").show();
+	fadeOut($(".ln-button2"));
+	localStorage.setItem("adc-search", "false");
+}
+
 
 $(".ln-button1").click(function () {
 		$("#result-list").show();
@@ -76,3 +83,8 @@ $("#send").click(function () {
 		$("#result-list").show();
 		$("#advanced-search").hide();
     });
+
+function getToSearch() {
+	$("#result-list").hide();
+	$("#advanced-search").show();
+}

@@ -65,13 +65,23 @@ footer{
 	position: absolute;
 	width: 200px;
 	height: 70px;
+	left: 0px;
+	top: 30px;
+	text-align: center;
+	line-height: 70px;;
+}
+
+#advanced-button{
+	position: absolute;
+	width: 200px;
+	height: 70px;
 	right: 200px;
 	top: 30px;
 	text-align: center;
 	line-height: 70px;;
 }
 
-#profile:hover, #my-recipe:hover{
+#profile:hover, #my-recipe:hover, #advanced-button:hover{
 	background-color: #939393;
 }
 #my-recipe{
