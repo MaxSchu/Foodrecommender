@@ -32,7 +32,8 @@ var Manager;
       target: '#diff_easy'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " req_skill:0";
+    queryString = getProfileTagString() + " AND req_skill:0";
+    console.log(queryString);
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -49,7 +50,7 @@ var Manager;
       target: '#diff_med'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " req_skill:25";
+    queryString = getProfileTagString() + " AND req_skill:25";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -67,7 +68,7 @@ var Manager;
       target: '#diff_hard'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " req_skill:[50 TO 75]";
+    queryString = getProfileTagString() + " AND req_skill:[50 TO 75]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -85,7 +86,7 @@ var Manager;
       target: '#time_easy'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " time_cook:[0 TO 15]";
+    queryString = getProfileTagString() + " AND time_cook:[0 TO 19]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -103,7 +104,7 @@ var Manager;
       target: '#time_med'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " time_cook:[15 TO 40]";
+    queryString = getProfileTagString() + " AND time_cook:[20 TO 40]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -121,7 +122,7 @@ var Manager;
       target: '#time_hard'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " time_cook:{40 TO 90";
+    queryString = getProfileTagString() + " AND time_cook:[41 TO 90]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
