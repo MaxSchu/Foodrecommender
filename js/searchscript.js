@@ -42,15 +42,16 @@ function getAdvancedSearchParameters() {
 	}
 
 	if($("#low").is(":checked")){
-		query+= " + time_cook:[0 TO 15]";
+		query+= " + time_cook:[0 TO 19]";
 	}
 	if($("#mid").is(":checked")){
-		query+= " + time_cook:[15 TO 40]";
+		query+= " + time_cook:[20 TO 40]";
 	}
 	if($("#high").is(":checked")){
-		query+= " + time_cook:{40 TO 90}";
+		query+= " + time_cook:[41 TO 90]";
 	}
 
+	console.log(query);
 	return query;
 }
 
