@@ -4,9 +4,11 @@
 		<meta charset="utf-8">
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
-		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<!-- bxSlider Javascript file -->
+		<script language="javascript" type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="libs/jquery.bxslider.css" rel="stylesheet" />
 	</head>
 
 	<body>
@@ -29,7 +31,13 @@
 			<div id = "suggestions">
 				
 				<div class = "line">
-					<div class = "suggestion">Schwierigkeit - einfach <div id = "diff_easy" class="widget-style"> </div></div>
+					<div class = "suggestion">Schwierigkeit - einfach 
+						<ul id="slider1" class = "slider-widget">
+						  <li><div class="slide-item"><h4 class = "slide-item-title center">Titel</h4><img class="medium-image slide-item-imagel" src="res/img/foodtest.jpg"> <img class="medium-image" src="res/img/foodtest.jpg"><p>Hier komt der Text loremipsum v Hier komt der Text loremipsum Hier komt der Text loremipsum Hier komt der Text loremipsum Hier komt der Text loremipsum</p></div></li>
+						  <li><div class="slide-item"><h4 class = "slide-item-title center">Titel</h4><img class="medium-image slide-item-imagel" src="res/img/foodtest.jpg"> <img class="medium-image" src="res/img/foodtest.jpg"><p>Hier komt der Text loremipsum v Hier komt der Text loremipsum Hier komt der Text loremipsum Hier komt der Text loremipsum Hier komt der Text loremipsum</p></div></li>
+						  <li><div class="slide-item"><h4 class = "slide-item-title center">Titel</h4><img class="medium-image slide-item-imagel" src="res/img/foodtest.jpg"> <img class="medium-image" src="res/img/foodtest.jpg"><p>Hier komt der Text loremipsum v Hier komt der Text loremipsum Hier komt der Text loremipsum Hier komt der Text loremipsum Hier komt der Text loremipsum</p></div></li>
+						</ul>
+					</div>
 					<div class = "suggestion">Schwierigkeit - mittel <div id = "diff_med" class="widget-style"> </div></div>
 					<div class = "suggestion">Schwierigkeit - aufwendig <div id = "diff_hard" class="widget-style"> </div></div>
 				</div>
