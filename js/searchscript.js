@@ -1,7 +1,11 @@
 var query = "";
+var $searchInput = $("#search-input");
+fillInput();
 
 function getAdvancedSearchParameters() {
-	query = $("#search-input").val();
+	query = $searchInput.val();
+	query = query.replace(/ /g, " + ");
+	console.log(query + "im here!");
 	var tagArray = getTagList();
 	var colorArray = getColorList();
 	if(tagArray.length > 0){
@@ -87,4 +91,14 @@ $("#send").click(function () {
 function getToSearch() {
 	$("#result-list").hide();
 	$("#advanced-search").show();
+}
+
+function fillInput() {
+	var locate = window.location;
+	document.search.getContent.value = locate;
+	var text;
+	text = document.search.getContent.value;
+  	text = text.substring(text.indexOf("=")+1);
+  	text = text.replace(/\+/g, " ");
+	$searchInput.val(text);
 }

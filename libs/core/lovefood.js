@@ -1,10 +1,12 @@
 doTheSearch("");
 var flag = true;
 
+
 function doTheSearch(inputText) {
-  var locate = window.location;
-  document.search.getContent.value = locate;
-  var text;
+var locate = window.location;
+document.search.getContent.value = locate;
+var text;
+  
   if(inputText == ""){
     text = document.search.getContent.value;
   }else{
@@ -50,9 +52,7 @@ function doTheSearch(inputText) {
 function delineate(str)
 {
   if(str[1] == '+' || str[1] == '-') {
-      console.log("i will substring stuff here!!!!!!");
       str = str.substring(3);
-      console.log(str);
     }
 
   returnText = str.indexOf("=")+1;
@@ -68,9 +68,6 @@ function delineate(str)
   } else {
     ingredientString += getProfileTagString();
   }
-
-
-
     ingredientString = ingredientString.replace(/\+/g, " AND " );
     ingredientString = ingredientString.replace(/\-/g, " NOT " );
     ingredientString = ingredientString.replace(/%C3/g, "" );
@@ -80,9 +77,7 @@ function delineate(str)
     ingredientString = ingredientString.replace(/%A4/g, "ä" );
     ingredientString = ingredientString.replace(/%BC/g, "ü" );
     ingredientString = ingredientString.replace(/%B6/g, "ö" );
-    ingredientString = ingredientString.replace(/%3A/g, ":" );
-
-    
+    ingredientString = ingredientString.replace(/%3A/g, ":" );    
 
 return(ingredientString);
 
@@ -106,4 +101,9 @@ function getProfileTagString() {
     }
   }
   return query;
+}
+
+function getInputInput() {
+  text = text.replace(/\+/g, " ");
+  return text;
 }
