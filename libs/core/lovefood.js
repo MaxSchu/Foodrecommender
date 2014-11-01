@@ -15,6 +15,9 @@ var text;
   }
   queryString = delineate(text);
 
+  if(queryString.indexOf("///") != -1){
+    queryString = 0;
+  }
   document.getElementById("query").innerHTML = "Suche nach: " + queryString;
 
   var Manager;

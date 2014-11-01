@@ -17,12 +17,6 @@ $(".ln-button2").click(function () {
 		$("#rated").hide();
     });
 
-$(".ln-button3").click(function () {
-		$("#saved-by-me").hide();
-		$("#remember").hide();
-		$("#rated").show();
-    });
-
 function addRecipeToList (listId, recipeName) {
 	var $list = $("#" + listId);
 
@@ -41,5 +35,5 @@ function addRecipeToList (listId, recipeName) {
 	$list.append($listItem)
 }
 
-addRecipeToList("rem", "Recipedeleteetet");
-addRecipeToList("rem", "Recipedeleteetet2");
+addRecipeToList("rem", "Recipe1");
+addRecipeToList("rem", "Recipe2");

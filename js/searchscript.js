@@ -98,6 +98,9 @@ function fillInput() {
 	document.search.getContent.value = locate;
 	var text;
 	text = document.search.getContent.value;
+	if(text.indexOf("=") == -1){
+		text = "";
+	}
   	text = text.substring(text.indexOf("=")+1);
   	text = text.replace(/\+/g, " ");
 	$searchInput.val(text);

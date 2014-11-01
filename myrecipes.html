@@ -5,8 +5,7 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="libs/jquery-1.9.1.min.js"></script>
 	</head>
 
 	<body>
@@ -23,35 +22,23 @@
 		<div class = "left-nav border">
 			<ul class = "left-nav-list">
 				<li id = "recipe-button" class = "ln-button1" >Eigene erstellte Rezepte</li>
-				<li id = "ingredients-button" class = "ln-button2">Vorgemerkte Rezepte</li>
-				<li id = "votes-button" class = "ln-button3">Bewertete Rezepte</li>
+				<li id = "ingredients-button" class = "ln-button2">Bewertete Rezepte</li>
 			</ul>
 		</div>
 
 				
 		<div id = "main-content">
 			<div id = "saved-by-me">
-				<h4 class = "center"> Von mir hochgeladene Rezepte: </h4>
+				<h4 class = "center"> Von mir hochgeladene Rezepte:(Selbst Content erstellen in diesem Prototypen nicht möglich) </h4>
 				<ul id = "save" class = "recipe-list">
-					<li><img class="medium-image" src="res/img/foodtest.jpg"><h4 id = "title" class="center">Rezept1</h4> <button id = "edit1">Bearbeiten</button></li>
-					<li><img class="medium-image" src="res/img/foodtest.jpg"><h4 id = "title" class="center">Rezept2</h4> <button id = "edit2">Bearbeiten</button></li>
+
 				</ul>
 			</div>
 			<div id = "remember">
-				<h4 class = "center"> Von mir vorgemerkte Rezepte: </h4>
+				<h4 class = "center"> Bewertete Rezepte: </h4>
 				<ul id = "rem" class = "recipe-list">
-					<li><img class="medium-image" src="res/img/foodtest.jpg"><h4 id = "title" class="center">Rezept1</h4> <button class = "delete">Löschen</button></li>
-					<li><img class="medium-image" src="res/img/foodtest.jpg"><h4 id = "title" class="center">Rezept2</h4> <button class = "delete">Löschen</button></li>
 				</ul>
-			</div>
-			<div id = "rated">
-				<h4 class = "center"> Von mir bewertete Rezepte: </h4>
-				<ul id = "rate">
-					<li>Rezept1 <button id = "edit1">Löschen</button></li>
-					<li>Rezept2 <button id = "edit2">derp</button></li>
-				</ul>
-			</div>
-			
+			</div>			
 		</div>
 		
 	</div>
@@ -61,19 +48,6 @@
 		<script src="js/homebutton.js"></script>
 		<script src="js/myrecipesscript.js"></script>
 		<script src="js/left-nav-script.js"></script>
-
-		<script src="libs/core/Core.js"></script>
-	 	<script src="libs/core/AbstractManager.js"></script>
-	 	<script src="libs/managers/Manager.jquery.js"></script>
-		<script src="libs/core/Parameter.js"></script>
-	 	<script src="libs/core/ParameterStore.js"></script>
-		<script src="libs/core/AbstractWidget.js"></script>
-		<script src="libs/core/AbstractFacetWidget.js"></script>
-		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
-		<script src="libs/widgets/ResultWidget.js"></script>
-
-		
 
 		<script>
 		</script>

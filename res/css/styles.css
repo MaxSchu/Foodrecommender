@@ -115,6 +115,10 @@ footer{
 	float: left;
 }
 
+.suggestion a {
+	color: #EEEEEE;
+}
+
 .slide-item {
 	width: 270px;
 	height: 260px;
