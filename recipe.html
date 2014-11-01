@@ -5,9 +5,7 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="libs/jquery-1.9.1.min.js"></script>
 
 		<!-- jRating-->
 		<link rel="stylesheet" type="text/css" href="jquery/jRating.jquery.css" media="screen" />
@@ -22,6 +20,11 @@
 	</head>
 
 	<body>
+
+	<FORM NAME="search">
+<INPUT TYPE="hidden" NAME="getContent">
+</FORM>	
+
 	<div class = "content">
 
 		<header>
@@ -33,16 +36,17 @@
 
 
 		<div class = "left-nav border">
-			<button id = "recipe-button" class = "left-navi-button">Rezept</button>
-			<button id = "ingredients-button" class = "left-navi-button">Zutaten</button>
-			<button id = "equipment-button" class = "left-navi-button">Ausrüstung</button>
-			<button id = "votes-button" class = "left-navi-button">Bewertungen</button>
+			<ul class = "left-nav-list">
+				<li id = "recipe-button" class = "ln-button1" >Rezept</li>
+				<li id = "ingredients-button" class = "ln-button2">Zutaten</li>
+				<li id = "votes-button" class = "ln-button3">Bewertungen</li>
+			</ul>
 		</div>
 
 				
 		<div id = "main-content">
-			<div id ="recipe-content">
-				<h2 class = "center">Thai Curry</h2>
+			<h2 id = "recipe-title"class = "center">Thai Curry</h2>
+			<div id ="recipe-content">				
 				<div class="jcarousel-wrapper">
 	                <div class="jcarousel">
 	                    <ul>
@@ -64,37 +68,14 @@
         		</div>
 				<h4 class = "left-text">Rezept:</h4>
 				<p id="recipe-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-				<ul>
-					<li>Lorem ipsum</li>
-					<li>Lorem ipsum</li>
-				</ul>
 
 				<p id = "rating-text"> Bewerten: <p>
 				<div class="rating" data-average="5" data-id="3"></div>
 			</div>
 			<div id = "ingredients-content">
-				<h2 class = "center">Thai Curry</h2>
-				<h4 class = "left-text">Zutaten:</h4>
-				<ul>
-					<li>200g Asia Gemüse</li>
-					<li>50g grüne Curry paste</li>
-					<li>lorem</li>
-					<li>ipsum</li>
-				</ul>
 			</div>
-			<div id = "equipment-content">
-				<h2 class = "center">Thai Curry</h2>
-				<h4 class = "left-text">Kochutensilien:</h4>
-				<ul>
-					<li>Pfanne</li>
-					<li>Kochlöffel</li>
-					<li>Teller</li>
-					<li>Besteck</li>
-				</ul>
 
-			</div>
 			<div id = "votes-content">
-				<h2 class = "center">Thai Curry</h2>
 				<h4 class = "left-text">Bewertungen:</h4>
 
 				<div id="5-star" class = "left-text star" data-average="5" data-id="3"></div>
@@ -114,6 +95,7 @@
 
 		<script src="js/homebutton.js"></script>
 		<script src="js/recipescript.js"></script>
+		<script src="js/left-nav-script.js"></script>
 
 		<script src="libs/core/Core.js"></script>
 	 	<script src="libs/core/AbstractManager.js"></script>
@@ -123,8 +105,8 @@
 		<script src="libs/core/AbstractWidget.js"></script>
 		<script src="libs/core/AbstractFacetWidget.js"></script>
 		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
-		<script src="libs/widgets/ResultWidget.js"></script>
+		<script src="libs/widgets/ResultWidgetRecipe.js"></script>
+		<script src="libs/core/recipes.js"></script>
 
 		
 

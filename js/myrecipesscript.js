@@ -1,15 +1,39 @@
-$(".left-navi-button").click(function () {
-		window.location = "myrecipes.html";
+var idCount = 0;
+
+$("#saved-by-me").show();
+$("#remember").hide();
+$("#rated").hide();
+
+$(".ln-button1").click(function () {
+		console.log("sdfsadflkj");
+		$("#saved-by-me").show();
+		$("#remember").hide();
+		$("#rated").hide();
     });
 
-$("#safed-recipes").click(function () {
-		window.location = "myrecipessaved.html";
+$(".ln-button2").click(function () {
+		$("#saved-by-me").hide();
+		$("#remember").show();
+		$("#rated").hide();
     });
 
-$("#my-recipes").click(function () {
-		window.location = "myrecipescreatedbyme.html";
+function addRecipeToList (listId, recipeName) {
+	var $list = $("#" + listId);
+
+	var $listItem = $('<li id = "item'+idCount+'"><img class="medium-image" src="res/img/foodtest.jpg"> </li>');
+	var $listTitle = $('<h4 id = "title" class="center">' + recipeName + '</h4>');
+	var $listButton = $('<button id = "edit' + idCount +'">Löschen</button>');
+	idCount++;
+
+	$listButton.click(function () {
+		$($(this).parent()).remove();
     });
 
-$("#my-voting").click(function () {
-		window.location = "myrecipesreviews.html";
-    });
+	$listItem.append($listTitle);
+	$listItem.append($listButton);
+
+	$list.append($listItem)
+}
+
+addRecipeToList("rem", "Recipe1");
+addRecipeToList("rem", "Recipe2");

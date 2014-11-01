@@ -1,36 +1,24 @@
 var $recipeContent = $("#recipe-content");
 var $ingredientsContent = $("#ingredients-content");
-var $equipmentContent = $("#equipment-content");
 var $votesContent = $("#votes-content");
 
 $ingredientsContent.hide();
-$equipmentContent.hide();
 $votesContent.hide();
 
 $("#recipe-button").click(function () {
 		$recipeContent.show();
 		$ingredientsContent.hide();
-		$equipmentContent.hide();
 		$votesContent.hide();
     });
 
 $("#ingredients-button").click(function () {
 		$recipeContent.hide();
 		$ingredientsContent.show();
-		$equipmentContent.hide();
-		$votesContent.hide();
-    });
-
-$("#equipment-button").click(function () {
-		$recipeContent.hide();
-		$ingredientsContent.hide();
-		$equipmentContent.show();
 		$votesContent.hide();
     });
 $("#votes-button").click(function () {
 		$recipeContent.hide();
 		$ingredientsContent.hide();
-		$equipmentContent.hide();
 		$votesContent.show();
     });
 
@@ -81,4 +69,9 @@ $(document).ready(function(){
 var $leftNav = $(".left-nav");
 if($leftNav != null){
 	$leftNav.height($("#main-content").height()+40);
+}
+
+function initialiseRecipe(name, recipe) {
+	$("#recipe-description").html(recipe);
+	$("#recips-title").html(name);
 }

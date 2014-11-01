@@ -5,9 +5,7 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="libs/jquery-1.9.1.min.js"></script>
 	</head>
 
 	<body>
@@ -22,9 +20,11 @@
 
 
 		<div class = "left-nav border">
-			<button id = "aboutus" class = "left-navi-button">Über uns</button>
-			<button id = "contact" class = "left-navi-button">Kontakt</button>
-			<button id = "impressum" class = "left-navi-button">Impressum</button>
+		<ul class = "left-nav-list">
+				<li id = "aboutus" class = "ln-button1" >Über uns</li>
+				<li id = "contact" class = "ln-button2">Kontakt</li>
+				<li id = "impressum" class = "ln-button3">Impressum</li>
+			</ul>
 		</div>
 
 				
@@ -56,20 +56,7 @@
 		
 		<script src="js/homebutton.js"></script>
 		<script src="js/aboutus.js"></script>
-
-
-		<script src="libs/core/Core.js"></script>
-	 	<script src="libs/core/AbstractManager.js"></script>
-	 	<script src="libs/managers/Manager.jquery.js"></script>
-		<script src="libs/core/Parameter.js"></script>
-	 	<script src="libs/core/ParameterStore.js"></script>
-		<script src="libs/core/AbstractWidget.js"></script>
-		<script src="libs/core/AbstractFacetWidget.js"></script>
-		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
-		<script src="libs/widgets/ResultWidget.js"></script>
-
-		
+		<script src="js/left-nav-script.js"></script>	
 
 		<script>
 		</script>

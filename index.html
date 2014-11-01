@@ -1,77 +1,100 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		  <link rel="stylesheet" href="res/css/styles.css">
 		<meta charset="utf-8">
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
-		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="libs/jquery-1.9.1.min.js"></script>
+		<!-- bxSlider Javascript file -->
+		<script language="javascript" type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="libs/jquery.bxslider.css" rel="stylesheet" />
 	</head>
 
 	<body>
-
 	<div id = "index-content">
 
 		<header>
-			<div id = "homebutton" class = "border"> HOME</div>
-			<div id = "search" class = "border">Searchbar</div>
-			
-			<div id = "logo-bar">
-				<a id = "profile" href = "profile.html">Profil</a>
-				<img id = "foodpic" class = "center" src="res/img/lovefood.png"></img>
-				<a id = "my-recipe" href = "myrecipes.html">Meine Rezepte</a>
+			<div id = "index-header">
+				<div id = "s">Suche:</div> <form method="Link" action="search.html"><input id = "search" type="search" name="fname" text="Suche"></form>			
+				<div id = "profile" class = "">Profil</div>
+				<img id = "foodpic-small" class = "center" src="res/img/lovefood.png"></img>
+				<div id = "my-recipe" class = "">Meine Rezepte</div>
+				<div id = "advanced-button" class = "">Erweiterte Suche</div>
 			</div>
+			
 			
 			
 		</header>
 
-		<main>
+		<div id = "index-main-content">
 			<div id = "suggestions">
+				
 				<div class = "line">
-					<div class = "suggestion">Beliebteste Rezepte</div>
-					<div class = "suggestion">Tagesvorschläge</div>
-					<div class = "suggestion">Rezepte für mich</div>
+					<div class = "suggestion">Schwierigkeit - einfach 
+						<ul id="diff_easy" class = "slider-widget">
+
+						</ul>
+					</div>
+					<div class = "suggestion">Schwierigkeit - mittel 
+						<ul id="diff_med" class = "slider-widget">
+
+						</ul>
+					</div>
+					<div class = "suggestion">Schwierigkeit - aufwändig 
+						<ul id="diff_hard" class = "slider-widget">
+
+						</ul>
+					</div>
 				</div>
 				<div class = "line">
-					<div class = "suggestion">Menüvorschläge</div>
-					<div class = "suggestion">Aktuelle Anlässe</div>
-					<div class = "suggestion">Nationalitätsgerichte</div>
-				</div>
+					<div class = "suggestion">Zeitaufwand - gering 
+						<ul id="time_easy" class = "slider-widget">
+
+						</ul>
+					</div>
+					<div class = "suggestion">Zeitaufwand - mittel 
+						<ul id="time_med" class = "slider-widget">
+
+						</ul>
+					</div>
+					<div class = "suggestion">Zeitaufwand - hoch 
+						<ul id="time_hard" class = "slider-widget">
+
+						</ul>
+					</div>
+				</div>	
 				<div class = "line">
-					<div class = "suggestion">Bestbewertete Gerichte</div>
-					<div class = "suggestion">schnell zubereitete Gerichte</div>
-					<div class = "suggestion">Rezepte geordnet nach Schwierigkeit</div>
-				</div>				
+					<div class = "suggestion center" >Rezepte für mich
+						<ul id="forMe" class = "slider-widget">
+
+						</ul>
+					</div>				
+				</div>
 			</div>
-		</main>
+		</div>
 
 		
 		<footer>
-			<div >Über uns</div>
+			<div id = "aboutus">Über uns</div>
 		</footer>
 		
 	</div>
 
-
 		
 
-		<script src="js/homebutton.js"></script>
+		<script language="javascript" type="text/javascript" src="js/indexscript.js"></script>
 
-
-		<script src="libs/core/Core.js"></script>
-	 	<script src="libs/core/AbstractManager.js"></script>
-	 	<script src="libs/managers/Manager.jquery.js"></script>
-		<script src="libs/core/Parameter.js"></script>
-	 	<script src="libs/core/ParameterStore.js"></script>
-		<script src="libs/core/AbstractWidget.js"></script>
-		<script src="libs/core/AbstractFacetWidget.js"></script>
-		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
-		<script src="libs/widgets/ResultWidget.js"></script>
-		<script src="libs/widgets/PagerWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/Core.js"></script>
+	 	<script language="javascript" type="text/javascript" src="libs/core/AbstractManager.js"></script>
+	 	<script language="javascript" type="text/javascript" src="libs/managers/Manager.jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/Parameter.js"></script>
+	 	<script language="javascript" type="text/javascript" src="libs/core/ParameterStore.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/AbstractWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/AbstractFacetWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/AbstractTextWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/widgets/ResultWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/lovefoodIndex.js"></script>
 
 		
 

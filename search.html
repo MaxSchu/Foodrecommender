@@ -5,15 +5,15 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="libs/jquery-1.9.1.min.js"></script>
 
 	</head>
 
 	<body>
+<FORM NAME="search">
+<INPUT TYPE="hidden" NAME="getContent">
+</FORM>
 	<div class = "content">
-
 		<header>
 			<div class = "header">
 				<div id = "homebutton" class = "border" >HOME</div>
@@ -23,40 +23,92 @@
 
 
 		<div class = "left-nav border">
-			<button id = "search-button" class = "left-navi-button">Rezept</button>
-			<button id = "menusearch-button" class = "left-navi-button">Zutaten</button>
-			<button id = "causesearch-button" class = "left-navi-button">Ausrüstung</button>
+			<ul class = "left-nav-list">			
+				<li id = "search-button" class = "left-navi-button ln-button1">Ergebnisse</li>
+				<li id = "menusearch-button" class = "left-navi-button ln-button2">Erweiterte Suche</li>
+			</ul>
 		</div>
 
-				
+		
 		<div id = "main-content">
-			<div id ="search-content">
-				
-			</div>
-			<div id = "menusearch-content">
+			<div id = "result-list">
+				<div id="query"></div>
+				<div id="result">
+				 <div id="navigation">
 
+     			   </div>
+    			    <div id="docs"></div>       			   <ul id="pager"></ul>
+      			    <div id="pager-header"></div>
+				</div>
 			</div>
-			<div id = "causesearch-content">
 
+			<div id = "advanced-search">
+				<h2 class = "center">Erweiterte Suche</h2>
+				<p>Name:</p>
+				<input id = "search-input" type = "text">
+				<p>Zutaten:</p>
+				<div id = "used-tags">
+					<ul id = "tag-list">
+
+					</ul>
+				</div>
+				<img id = "red"class = "red" src="res/img/-.png"></img>		
+				<input id = "ingredients-input" type = "text" list = "tags">			
+				<img id = "green" class = "green" src="res/img/+.png"></img><br><br><br>
+				<input id = "vg" class = "check" type = "checkbox">Vegan
+				<input id = "vgt" class = "check"type = "checkbox">Vegetarisch<br>
+				<input id = "pork" class = "check"type = "checkbox">kein Schweinefleisch
+				<input id = "beef" class = "check"type = "checkbox">kein Rind
+				<input id = "alc" class = "check"type = "checkbox">Alkoholfrei
+				<form action=""><br>
+					<h5>Schwierigkeit:</h5>
+					<input id="easy" type="radio" name="difficulty">leicht
+					<input id="med" type="radio" name="difficulty">mittel
+					<input id="dif" type="radio" name="difficulty">schwer<br>
+
+				<form action="">
+					<h5>Zeitaufwand:</h5>
+					<input id="low" type="radio" name="time">gering
+					<input id="mid" type="radio" name="time">mittel
+					<input id="high" type="radio" name="time">hoch
+				<div id = "send" class = "button">Absenden</div>
 			</div>
-		</div>		
+		</div>	
 	</div>
 
 		
+		<datalist id="tags">
+			<option value="Gurken">
+			<option value="Senf">
+			<option value="Apfel">
+			<option value="Kartoffel">
+			<option value="Zimt">
+			<option value="Erdnüsse">
+			<option value="Rotwein">
+			<option value="Tomaten">
+			<option value="Chilli">
+			<option value="Zwiebel">
+			<option value="Knoblauch">
+			<option value="Salz">
+		</datalist>
 
-		<script src="js/homebutton.js"></script>
-		<script src="js/seachscript.js"></script>
+		<script language="javascript" type="text/javascript" src="js/left-nav-script.js"></script>
+		<script language="javascript" type="text/javascript" src="js/homebutton.js"></script>
+		<script language="javascript" type="text/javascript" src="js/searchscript.js"></script>		
+		<script language="javascript" type="text/javascript" src="js/tagsystem.js"></script>
 
-		<script src="libs/core/Core.js"></script>
-	 	<script src="libs/core/AbstractManager.js"></script>
-	 	<script src="libs/managers/Manager.jquery.js"></script>
-		<script src="libs/core/Parameter.js"></script>
-	 	<script src="libs/core/ParameterStore.js"></script>
-		<script src="libs/core/AbstractWidget.js"></script>
-		<script src="libs/core/AbstractFacetWidget.js"></script>
-		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
-		<script src="libs/widgets/ResultWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/Core.js"></script>
+	 	<script language="javascript" type="text/javascript" src="libs/core/AbstractManager.js"></script>
+	 	<script language="javascript" type="text/javascript" src="libs/managers/Manager.jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/Parameter.js"></script>
+	 	<script language="javascript" type="text/javascript" src="libs/core/ParameterStore.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/AbstractWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/AbstractFacetWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/AbstractTextWidget.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/core/lovefood.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/widgets/ResultWidgetSearch.js"></script>
+		<script language="javascript" type="text/javascript" src="libs/widgets/PagerWidget.js"></script>
+
 
 		
 

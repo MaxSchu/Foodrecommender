@@ -5,9 +5,7 @@
 		<title>Foodrecommender</title>
 		<link rel="stylesheet" href="res/css/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="libs/jquery-1.9.1.min.js"></script>
 	</head>
 
 	<body>
@@ -22,10 +20,11 @@
 
 
 		<div class = "left-nav border">
-			<button id = "personal-button" class = "left-navi-button">Persönliche Daten</button>
-			<button id = "i-like-button" class = "left-navi-button">Ich mag</button>
-			<button id = "i-dont-like-button" class = "left-navi-button">Ich mag nicht</button>
-			<button id = "social-button"class = "left-navi-button">Soziale Netzwerke</button>
+			<ul class = "left-nav-list">
+				<li id = "personal-button" class="ln-button1">Persönliche Daten</li>
+				<li id = "i-like-button" class="ln-button2">Meine Zutaten</li>
+				<li id = "social-button" class="ln-button4">Soziale Netzwerke</li>
+			</ul>
 		</div>
 
 				
@@ -46,13 +45,17 @@
 
 			<div id = "like-ingredient-profile">
 				<h4 class = "center"> In meinen Gerichten lege ich viel Wert auf folgende Zutaten: </h4>
-				<div class = "ingredient-choice border center">
-					<ul>
-						<li>Bohnen</li>
-						<li>Salami</li>
-						<li>Fisch</li>
+				<p>Zutaten:</p>
+				<div id = "used-tags">
+					<ul id = "tag-list">
+						
 					</ul>
-				</div>		
+				</div>
+				<img id = "red"class = "red" src="res/img/-.png"></img>		
+				<input id = "ingredients-input" type = "text" list = "tags">			
+				<img id = "green" class = "green" src="res/img/+.png"></img>
+				<br>	
+				<p><br>Gebe hier an, welche Zutaten in dein Essen gehören (grün) und welche nicht (rot)</p>
 			</div>
 
 			<div id = "dislike-ingredient-profile">
@@ -82,20 +85,8 @@
 		
 		<script src="js/homebutton.js"></script>
 		<script src="js/profile.js"></script>
-
-
-		<script src="libs/core/Core.js"></script>
-	 	<script src="libs/core/AbstractManager.js"></script>
-	 	<script src="libs/managers/Manager.jquery.js"></script>
-		<script src="libs/core/Parameter.js"></script>
-	 	<script src="libs/core/ParameterStore.js"></script>
-		<script src="libs/core/AbstractWidget.js"></script>
-		<script src="libs/core/AbstractFacetWidget.js"></script>
-		<script src="libs/core/AbstractTextWidget.js"></script>
-		<script src="libs/core/lovefood.js"></script>
-		<script src="libs/widgets/ResultWidget.js"></script>
-
-		
+		<script src="js/left-nav-script.js"></script>
+		<script src="js/tagsystem.js"></script>	
 
 		<script>
 		</script>
