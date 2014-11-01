@@ -13,16 +13,3 @@ $("#advanced-button").click(function () {
 		window.location = "search.html";
 		localStorage.setItem("adv-search", "true");
     });
-
-
-
-
-$(document).ready(function(){
-  $('#slider1').bxSlider({
-	  auto: true,
-	  slideWidth: 275,
-	  autoControls: true,
-	  pause: 10000,
-	  slideMargin: 10
-	});
-});

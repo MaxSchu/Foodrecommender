@@ -25,6 +25,7 @@ AjaxSolr.ResultWidgetSearch = AjaxSolr.AbstractWidget.extend({
     var output = '<div><img class="result-img" src="res/img/foodtest.jpg"><h2><a href="recipe.html?id='+ doc.id + '">' + doc.title + '</a></h2>';
     //output += '<p id="links_' + doc.id + '" class="links"></p>';
     output += '<p>' + snippet + '</p></div>';
+    console.log("doing stuff in here");
     return output;
   }
 });

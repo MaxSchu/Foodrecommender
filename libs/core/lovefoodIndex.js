@@ -1,3 +1,5 @@
+
+
 var Manager;
 
 (function ($) {
@@ -12,11 +14,9 @@ var Manager;
     }));
     Manager.init();
     queryString = getProfileTagString();
-    console.log(queryString);
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
- 
    });
   
 
@@ -33,7 +33,6 @@ var Manager;
     }));
     Manager.init();
     queryString = getProfileTagString() + " AND req_skill:0";
-    console.log(queryString);
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -132,6 +131,26 @@ var Manager;
 
 
 
+function reloadSliders() {
+  slider1.reloadSlider();
+  slider2.reloadSlider();
+  slider3.reloadSlider();
+  slider4.reloadSlider();
+  slider5.reloadSlider();
+  slider6.reloadSlider();
+  slider7.reloadSlider();
+}
+
+function reloadTarget(target) {
+  $(target).bxSlider({
+    auto: true,
+    slideWidth: 275,
+    autoControls: true,
+    pause: 10000,
+    slideMargin: 10
+  });
+}
+ 
 
 function getProfileTagString() {
   var query = "";
