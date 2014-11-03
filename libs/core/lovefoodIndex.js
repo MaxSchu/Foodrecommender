@@ -1,8 +1,10 @@
-
+var string = getProfileTagString();
+var queryString;
 
 var Manager;
 
-(function ($) {
+(function ($) {  
+
 
   $(function () {
     Manager = new AjaxSolr.Manager({
@@ -13,8 +15,7 @@ var Manager;
       target: '#forMe'
     }));
     Manager.init();
-    queryString = getProfileTagString();
-    Manager.store.addByValue('q', queryString);
+    Manager.store.addByValue('q', string);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
    });
@@ -32,7 +33,8 @@ var Manager;
       target: '#diff_easy'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " AND req_skill:0";
+    getQuery();
+    queryString += "req_skill:0";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -49,7 +51,9 @@ var Manager;
       target: '#diff_med'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " AND req_skill:25";
+    getQuery();
+    queryString += "req_skill:25";
+    console.log(queryString);
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -67,7 +71,8 @@ var Manager;
       target: '#diff_hard'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " AND req_skill:[50 TO 75]";
+    getQuery();
+    queryString += "req_skill:[50 TO 75]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -85,7 +90,8 @@ var Manager;
       target: '#time_easy'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " AND time_cook:[0 TO 19]";
+    getQuery();
+    queryString += "time_cook:[0 TO 19]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -103,7 +109,8 @@ var Manager;
       target: '#time_med'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " AND time_cook:[20 TO 40]";
+    getQuery();
+    queryString += "time_cook:[20 TO 40]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -121,7 +128,8 @@ var Manager;
       target: '#time_hard'
     }));
     Manager.init();
-    queryString = getProfileTagString() + " AND time_cook:[41 TO 90]";
+    getQuery();
+    queryString += "time_cook:[41 TO 90]";
     Manager.store.addByValue('q', queryString);
     Manager.store.addByValue('rows', '3');
     Manager.doRequest();
@@ -149,6 +157,13 @@ function reloadTarget(target) {
     pause: 10000,
     slideMargin: 10
   });
+}
+
+function getQuery () {
+  queryString = getProfileTagString();
+    if(queryString != "") {
+    queryString += " AND ";
+  }
 }
  
 
