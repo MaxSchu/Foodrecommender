@@ -63,3 +63,21 @@ txt = x[0];
 document.getElementById("recipe-title").innerHTML = "Hallo";
 
 */
+
+function saveRecipe() {
+  var idCount;
+
+  if(localStorage.getItem("idCount") == null) {
+    localStorage.setItem("idCount", 0);
+    idCount = 0;
+    localStorage.setItem("id" + idCount, delineate(text));
+    localStorage.setItem("idTitle" + idCount, $("#recipe-title").html());
+  } else {
+    idCount = localStorage.getItem("idCount");
+    idCount++;
+    localStorage.setItem("id" + idCount, delineate(text));
+    localStorage.setItem("idCount", idCount);
+    localStorage.setItem("idTitle" + idCount, $("#recipe-title").html());
+  }
+  console.log(localStorage.getItem("idTitle" + idCount));
+}

@@ -330,6 +330,10 @@ img.red:hover, img.green:hover {
 	float: left;
 }
 
+.recipe-list a {
+	color: #EEEEEE;
+}
+
 .recipe-list button {
 	position: absolute;
 	bottom: 0;

@@ -75,3 +75,4 @@ function initialiseRecipe(name, recipe) {
 	$("#recipe-description").html(recipe);
 	$("#recips-title").html(name);
 }
+

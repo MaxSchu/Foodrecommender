@@ -1,5 +1,3 @@
-var idCount = 0;
-
 $("#saved-by-me").show();
 $("#remember").hide();
 $("#rated").hide();
@@ -17,16 +15,16 @@ $(".ln-button2").click(function () {
 		$("#rated").hide();
     });
 
-function addRecipeToList (listId, recipeName) {
+function addRecipeToList (listId, recipeName, idCount) {
 	var $list = $("#" + listId);
 
-	var $listItem = $('<li id = "item'+idCount+'"><img class="medium-image" src="res/img/foodtest.jpg"> </li>');
+	var $listItem = $('<li id = "id' +idCount+ '"><img class="medium-image" src="res/img/foodtest.jpg"> </li>');
 	var $listTitle = $('<h4 id = "title" class="center">' + recipeName + '</h4>');
 	var $listButton = $('<button id = "edit' + idCount +'">Löschen</button>');
-	idCount++;
 
 	$listButton.click(function () {
 		$($(this).parent()).remove();
+		localStorage.setItem($($(this).parent()).attr("id"), -1);
     });
 
 	$listItem.append($listTitle);
@@ -35,5 +33,17 @@ function addRecipeToList (listId, recipeName) {
 	$list.append($listItem)
 }
 
-addRecipeToList("rem", "Recipe1");
-addRecipeToList("rem", "Recipe2");
+function fillList() {
+	var idCounter;
+	if(localStorage.getItem("idCount") != null) {
+		console.log("filling list" + localStorage.getItem("idCount"));
+		idCounter = localStorage.getItem("idCount");
+		for(var i = 0; i <= idCounter; i++) {
+			if(localStorage.getItem("id" + i) != -1){
+				addRecipeToList("rem", '<a href="recipe.html?id='+ localStorage.getItem("id" + i) + '">' + localStorage.getItem("idTitle" + i) + '</a>', i);
+			}			
+		}
+	}
+}
+
+fillList();
