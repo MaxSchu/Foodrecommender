@@ -365,7 +365,7 @@ img.red:hover, img.green:hover {
 .foto-box-image{
     display: block;
     height: 250px;
-    width: auto;
+    width: 300px;
 }
 
 #docs a {
